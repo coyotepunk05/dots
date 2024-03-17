@@ -1,0 +1,2 @@
+swaylock --daemonize
+systemctl suspend
