@@ -1,0 +1,340 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0.0);
+    opacity: 1.0;
+    border-bottom: 3px solid rgba(100, 114, 125, 0);
+    color: #ffdb6e;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.1;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button {
+    border-radius: 24px;
+    background-color: #201c1c;
+    color: #ffdb6e;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.focused {
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#mode {
+    background-color: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+#clock {
+	;border-radius: 24px;
+	;padding-right: 8px;
+	;padding-left: 8px;
+}
+#battery {
+        border-radius: 24px;
+        padding-right:14px;
+        padding-left: 8px;
+}
+#cpu {
+        border-radius: 24px;
+        padding-right: 10px;
+        padding-left: 8px;
+}
+#memory {
+        border-radius: 24px;
+        padding-right: 12px;
+        padding-left: 8px;
+}
+#disk {
+        border-radius: 24px;
+        padding-right: 8px;
+        padding-left: 8px;
+}
+#temperature {
+        border-radius: 24px;
+        padding-right: 8px;
+        padding-left: 8px;
+}
+#backlight {
+        border-radius: 24px;
+        padding-right: 8px;
+        padding-left: 8px;
+}
+#network {
+        border-radius: 24px;
+        padding-right: 14px;
+        padding-left: 8px;
+}
+#pulseaudio {
+        border-radius: 24px;
+        padding-right: 8px;
+        padding-left: 8px;
+}
+#wireplumber {
+        border-radius: 24px;
+        padding-right: 8px;
+        padding-left: 8px;
+}
+#custom-media {
+        border-radius: 24px;
+        padding-right: 8px;
+        padding-left: 8px;
+}
+#tray {
+        border-radius: 24px;
+        padding-right: 8px;
+        padding-left: 8px;
+}
+#mode {
+        border-radius: 24px;
+        padding-right: 8px;
+        padding-left: 8px;
+}
+#idle_inhibitor {
+        border-radius: 24px;
+        padding-right: 8px;
+        padding-left: 8px;
+}
+#scratchpad {
+        border-radius: 24px;
+        padding-right: 8px;
+        padding-left: 8px;
+}
+#mpd {
+    padding: 0 10px;
+    ;color: #ffffff;
+}
+
+#window {
+        border-radius: 24px;
+        padding-right: 8px;
+        padding-left: 8px;
+}
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+    background-color: #201c1c;
+}
+
+#battery {
+    background-color: #201c1c;
+}
+
+#battery.charging, #battery.plugged {
+    color: #ffffff;
+    background-color: #26A65B;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #201c1c;
+}
+
+#cpu {
+    background-color: #201c1c;
+}
+
+#memory {
+    background-color: #201c1c;
+}
+
+#disk {
+    background-color: #201c1c;
+}
+
+#backlight {
+    background-color: #201c1c;
+}
+
+#network {
+    background-color: #201c1c;
+
+}
+
+#network.disconnected {
+    background-color: #704c74;
+}
+
+#pulseaudio {
+    background-color: #201c1c;
+}
+
+#pulseaudio.muted {
+    background-color: #201c1c;
+}
+
+#wireplumber {
+    background-color: #704c74;
+}
+
+#wireplumber.muted {
+    background-color: #f53c3c;
+}
+
+#custom-media {
+    background-color: #66cc99;
+    color: #2a5c45;
+    min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+    background-color: #66cc99;
+}
+
+#custom-media.custom-vlc {
+    background-color: #ffa000;
+}
+
+#temperature {
+    background-color: #201c1c;
+}
+
+#temperature.critical {
+    background-color: #eb4d4b;
+}
+
+#tray {
+    background-color: #201c1c;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: highlight;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #201c1c;
+}
+
+#idle_inhibitor {
+    background-color: #201c1c;
+}
+
+#idle_inhibitor.activated {
+    background-color: #201c1c;
+}
+
+#mpd {
+    background-color: #201c1c;
+    color: #2a5c45;
+}
+
+#mpd.disconnected {
+    background-color: #f53c3c;
+}
+
+#mpd.stopped {
+    background-color: #90b1b1;
+}
+
+#mpd.paused {
+    background-color: #51a37a;
+}
+
+#language {
+    background: #00b093;
+    color: #740864;
+    padding: 0 5px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    background: #97e1ad;
+    color: #000000;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad.empty {
+	background-color: transparent;
+}
