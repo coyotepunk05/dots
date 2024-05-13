@@ -9,7 +9,7 @@ window{
 	background-color: rgba(50, 50, 50, 0.9);
 	color: white;
 	border-radius: 17px;
-	#border-bottom: 3px solid purple;
+	#border-bottom: 3px solid orange;
 }
 
 #entry{
@@ -35,5 +35,5 @@ window{
 
 image{
 	margin-left: .25em;
-	margine-right: .25em;
+	margin-right: .25em;
 }
