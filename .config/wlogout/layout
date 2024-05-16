@@ -30,7 +30,7 @@
 }
 {
     "label" : "reboot",
-    "action" : "shutdown -r now",
+    "action" : "reboot",
     "text" : "Reboot",
     "keybind" : "r"
 }

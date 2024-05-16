@@ -57,6 +57,11 @@
             "key": "├─ ",
             "keyColor": "yellow"
         },
+	{
+	    "type": "packages",
+	    "key": "├─󰙵 ",
+	    "keyColor": "yellow"
+	},
         {
             "type": "de",
             "key": "├─ ",
