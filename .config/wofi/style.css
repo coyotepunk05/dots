@@ -1,3 +1,5 @@
+@import ".cache/wal/colors-waybar.css";
+
 * {
 	border-radius: 3px;
 	border: none;
@@ -18,8 +20,8 @@ window{
 }
 
 #entry:selected {
-	background-color: #bbccdd;
-	background: linear-gradient(30deg, #ff9900, #ffff66);
+	background-color: @color1;
+	background: linear-gradient(30deg, @color4, @color5);
 }
 
 #text: selected {

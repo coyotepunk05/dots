@@ -1,3 +1,5 @@
+@import "wal/colors-waybar.css";
+
 * {
 	border: none;
 	border-radius: 10px;
@@ -54,7 +56,7 @@ window#waybar.chromium {
 
 #workspaces button {
 	transition: none;
-	color: #ffdb6e;
+	color: @color13;
 	background: transparent;
 	font-size: 16px;
 	border-radius: 2px;
@@ -95,7 +97,7 @@ window#waybar.chromium {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: #ffdb6e;
+	color: @color13;
 	background: #201c1c;
 }
 
@@ -107,7 +109,7 @@ window#waybar.chromium {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: #ffdb6e;
+	color: @color13;
 	background: #201c1c;
 }
 
@@ -119,7 +121,7 @@ window#waybar.chromium {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: #ffdb6e;
+	color: @color13;
 	background: #201c1c;
 }
 
@@ -153,7 +155,7 @@ window#waybar.chromium {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: #ffdb6e;
+	color: @color13;
 	background: #201c1c;
 }
 #clock {
@@ -164,7 +166,8 @@ window#waybar.chromium {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: #ffdb6e;
+	color: @color13;
+	/*color: @color13;*/
 	background: #201c1c;
 	/*background: #1A1826;*/
 }
@@ -177,7 +180,7 @@ window#waybar.chromium {
 	padding-right: 12px;
 	border-radius: 10px;
 	transition: none;
-	color: #ffdb6e;
+	color: @color13;
 	background: #201c1c;
 }
 
@@ -189,7 +192,7 @@ window#waybar.chromium {
 	padding-right: 14px;
 	border-radius: 10px;
 	transition: none;
-	color: #ffdb6e;
+	color: @color13;
 	background: #201c1c;
 }
 
@@ -227,7 +230,7 @@ window#waybar.chromium {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: #ffdb6e;
+	color: @color13;
 	background: #F28FAD;
 }
 
@@ -239,7 +242,7 @@ window#waybar.chromium {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: #ffdb6e;
+	color: @color13;
 	background: #201c1c;
 }
 
@@ -251,11 +254,11 @@ window#waybar.chromium {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: #ffdb6e;
+	color: @color13;
 	background: #201c1c;
 }
 
-#idle_inhibitor {
+#idle_inhibitor.deactivated {
 	margin-top: 8px;
         margin-left: 8px;
         padding-left: 10px;
@@ -263,9 +266,22 @@ window#waybar.chromium {
         margin-bottom: 0px;
         border-radius: 10px;
         transition: none;
-        color: #ffdb6e;
+        color: @color13;
         background: #201c1c;
 }
+
+#idle_inhibitor.activated {
+	margin-top: 8px;
+        margin-left: 8px;
+        padding-left: 10px;
+        padding-right: 18px;
+        margin-bottom: 0px;
+        border-radius: 10px;
+        transition: none;
+        color: @color20;
+        background: #201c1c;
+}
+
 #temperature {
 	 margin-top: 8px;
         margin-left: 8px;
@@ -274,6 +290,6 @@ window#waybar.chromium {
         margin-bottom: 0px;
         border-radius: 10px;
         transition: none;
-        color: #ffdb6e;
+        color: @color13;
         background: #201c1c;
 }
