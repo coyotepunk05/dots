@@ -1,0 +1,6 @@
+2024/07/29-19:31:44.647 4177 Reusing MANIFEST /home/cody/.config/vesktop/sessionData/IndexedDB/https_discord.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/07/29-19:31:44.647 4177 Recovering log #7
+2024/07/29-19:31:44.664 4177 Reusing old log /home/cody/.config/vesktop/sessionData/IndexedDB/https_discord.com_0.indexeddb.leveldb/000007.log 
+2024/07/29-19:31:49.678 4178 Level-0 table #13: started
+2024/07/29-19:31:49.694 4178 Level-0 table #13: 2015524 bytes OK
+2024/07/29-19:31:49.696 4178 Delete type=0 #7

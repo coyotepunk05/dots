@@ -19,3 +19,5 @@ swww img ${DIR}/${RANDOMPICS} --transition-fps 30 --transition-type any --transi
 sleep 3s
 
 wal -i "${DIR}/${RANDOMPICS}"
+
+pywalfox update
