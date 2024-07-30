@@ -1,0 +1,295 @@
+@import "wal/colors-waybar.css";
+
+* {
+	border: none;
+	border-radius: 10px;
+	font-family: "JetbrainsMono Nerd Font" ;
+	font-size: 16px;
+	min-height: 4px;
+}
+
+	window#waybar {
+	background: transparent;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+	
+
+#window {
+	margin-top: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+	transition: none;
+        color: transparent;
+	background: transparent;
+}
+#workspaces {
+	margin-top: 8px;
+	margin-left: 12px;
+	font-size: 4px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	background: #201c1c;
+	transition: none;
+}
+
+#workspaces button {
+	transition: none;
+	color: @color13;
+	background: transparent;
+	font-size: 16px;
+	border-radius: 2px;
+}
+
+#workspaces button.occupied {
+	transition: none;
+	color: #FFFFFF;
+	background: transparent;
+	font-size: 4px;
+}
+
+#workspaces button.active {
+	color: #FFFFFF;
+        border-top: 2px solid #FFFFFF;
+        border-bottom: 2px solid #FFFFFF;
+}
+
+#workspaces button:hover {
+	transition: none;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	color: #FAE3B0;
+	border-color: #E8A2AF;
+	color: #E8A2AF;
+}
+
+#workspaces button.active:hover {
+    color: #E8A2AF;
+}
+
+#network {
+	margin-top: 8px;
+	margin-left: 8px;
+	margin-right: 12px;
+	padding-left: 10px;
+	padding-right: 18px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: @color13;
+	background: #201c1c;
+}
+
+#pulseaudio {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: @color13;
+	background: #201c1c;
+}
+
+#battery {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 16px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: @color13;
+	background: #201c1c;
+}
+
+#battery.charging, #battery.plugged {
+	color: #FFFFFF;
+    background-color: #03AC13;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #E3242B;
+    color: #FFFFFF;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: #BF616A;
+        color: #B5E8E0;
+    }
+}
+
+#backlight {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: @color13;
+	background: #201c1c;
+}
+#clock {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: @color13;
+	/*color: @color13;*/
+	background: #201c1c;
+	/*background: #1A1826;*/
+}
+
+#memory {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 10px;
+	margin-bottom: 0px;
+	padding-right: 12px;
+	border-radius: 10px;
+	transition: none;
+	color: @color13;
+	background: #201c1c;
+}
+
+#cpu {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 10px;
+	margin-bottom: 0px;
+	padding-right: 14px;
+	border-radius: 10px;
+	transition: none;
+	color: @color13;
+	background: #201c1c;
+}
+
+#tray {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 10px;
+	margin-bottom: 0px;
+	padding-right: 10px;
+	border-radius: 10px;
+	transition: none;
+	color: #B5E8E0;
+	background: #201c1c;
+}
+
+#custom-launcher {
+	font-size: 24px;
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 5px;
+	border-radius: 10px;
+	transition: none;
+    color: #89DCEB;
+    background: #201c1c;
+}
+
+#custom-power {
+	font-size: 20px;
+	margin-top: 8px;
+	margin-left: 8px;
+	margin-right: 8px;
+	padding-left: 10px;
+	padding-right: 5px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: @color13;
+	background: #F28FAD;
+}
+
+#custom-wallpaper {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: @color13;
+	background: #201c1c;
+}
+
+#custom-spotify {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 15px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: @color13;
+	background: #201c1c;
+}
+
+#idle_inhibitor.deactivated {
+	margin-top: 8px;
+        margin-left: 8px;
+        padding-left: 10px;
+        padding-right: 18px;
+        margin-bottom: 0px;
+        border-radius: 10px;
+        transition: none;
+        color: @color13;
+        background: #201c1c;
+}
+
+#idle_inhibitor.activated {
+	margin-top: 8px;
+        margin-left: 8px;
+        padding-left: 10px;
+        padding-right: 18px;
+        margin-bottom: 0px;
+        border-radius: 10px;
+        transition: none;
+        color: @color20;
+        background: #201c1c;
+}
+
+#temperature {
+	 margin-top: 8px;
+        margin-left: 8px;
+        padding-left: 10px;
+        padding-right: 14px;
+        margin-bottom: 0px;
+        border-radius: 10px;
+        transition: none;
+        color: @color13;
+        background: #201c1c;
+}

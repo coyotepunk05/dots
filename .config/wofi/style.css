@@ -1,0 +1,41 @@
+@import ".cache/wal/colors-waybar.css";
+
+* {
+	border-radius: 3px;
+	border: none;
+}
+
+window{
+	font-size: 28px;
+	font-family: "Roboto Mono Medium";
+	background-color: rgba(50, 50, 50, 0.9);
+	color: white;
+	border-radius: 17px;
+	#border-bottom: 3px solid orange;
+}
+
+#entry{
+	padding: 0.25em;
+	border-radius: 17px;
+}
+
+#entry:selected {
+	background-color: @color1;
+	background: linear-gradient(30deg, @color4, @color5);
+}
+
+#text: selected {
+	color: #333333;
+}
+
+#input{
+	background-color: rgba(50, 50, 50, 0.5);
+	color: white;
+	padding: 0.25em;
+	border-radius: 17px;
+}
+
+image{
+	margin-left: .25em;
+	margin-right: .25em;
+}
