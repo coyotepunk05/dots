@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "tray", "custom/spotify", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["idle_inhibitor", "backlight",  "pulseaudio", "cpu", "memory", "temperature", "keyboard-state", "sway/language", "battery", "network"],
+    "modules-right": ["idle_inhibitor", "backlight",  "pulseaudio", "cpu", "memory", "temperature", "keyboard-state", "sway/language", "battery", "battery#bat2", "network"],
     // Modules configuration
     // "hyprland/workspaces": {
     //     "disable-scroll": true,
@@ -115,31 +115,14 @@
             "critical": 10
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% 󱐋",
+        "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
-    "b#!/usr/bin/env bash
-
-DIR=~/.config/hypr/hyprpaperssss
-
-echo $DIR
-
-PICS=($(ls $DIR -I '*.json'))
-
-RANDOMPICS=${PICS[ $RANDOM % ${#PICS[@]} ]}
-
-swww query || swww init
-
-echo Setting ${DIR}/${RANDOMPICS}
-
-swww img ${DIR}/${RANDOMPICS} --transition-fps 60 --transition-type any --transition-duration 3
-
-# Call the update.sh script after the transition is complete
-(sleep 3s && ~/.config/hypr/scripts/pywal.sh) &attery#bat2": {
+    "battery#bat2": {
         "bat": "BAT2"
     },
     "network": {

@@ -5,7 +5,8 @@
     "useQuickCss": true,
     "themeLinks": [],
     "enabledThemes": [
-        "pywal-vencord.theme.css"
+        "pywal-discord-default.theme.css",
+        "pywal-discord-pywal.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": false,
@@ -336,7 +337,8 @@
         },
         "PinDMs": {
             "enabled": true,
-            "dmSectioncollapsed": false
+            "dmSectioncollapsed": false,
+            "pinOrder": 0
         },
         "PlainFolderIcon": {
             "enabled": false
@@ -457,7 +459,9 @@
         "Translate": {
             "enabled": true,
             "autoTranslate": false,
-            "showChatBarButton": true
+            "showChatBarButton": true,
+            "receivedInput": "auto",
+            "receivedOutput": "en"
         },
         "TypingIndicator": {
             "enabled": true,
@@ -630,6 +634,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1722309317912
+        "settingsSyncVersion": 1722479626985
     }
 }

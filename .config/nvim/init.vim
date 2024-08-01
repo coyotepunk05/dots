@@ -1,6 +1,4 @@
 :set number " show line number
-:set clipboard+=unnamedplus
-
 " set keybindings
 	" esc	
 	nnoremap <C-S> :update<cr>
@@ -18,3 +16,7 @@
 	vnoremap <C-C> "+y
 	vnoremap <C-X> "+x
 
+highlight Normal guibg=none
+highlight NonText guibg=none
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none

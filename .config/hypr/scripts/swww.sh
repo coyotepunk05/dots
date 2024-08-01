@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+!/usr/bin/env bash
 
 DIR=~/.config/hypr/hyprpaperssss
 
@@ -14,10 +14,10 @@ swww query || swww init
 
 echo Setting ${DIR}/${RANDOMPICS}
 
-swww img ${DIR}/${RANDOMPICS} --transition-fps 30 --transition-type any --transition-duration 3
+swww img ${DIR}/${RANDOMPICS} --transition-fps 60 --transition-type any --transition-duration 3
 
-sleep 3s
-
-wal -i "${DIR}/${RANDOMPICS}"
+wal -i "${DIR}/${RANDOMPICS}" -n
 
 pywalfox update
+
+pywal-discord -p ~/.config/vesktop/themes -t pywal

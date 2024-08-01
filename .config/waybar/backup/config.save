@@ -1,14 +1,13 @@
 {
-    "reload_style_on_change": true, // Reload colors on background change
     "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "tray", "custom/spotify", "hyprland/window"],
+    "modules-left": ["hyprland/workspaces", "tray",  "hyprland/mode", "hyprland/scratchpad", "custom/media", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["idle_inhibitor", "backlight",  "pulseaudio", "cpu", "memory", "temperature", "keyboard-state", "sway/language", "battery", "network"],
+    "modules-right": ["idle_inhibitor", "backlight",  "pulseaudio", "cpu", "memory", "temperature", "keyboard-state", "sway/language", "battery", "battery#bat2", "network"],
     // Modules configuration
     // "hyprland/workspaces": {
     //     "disable-scroll": true,
@@ -115,31 +114,14 @@
             "critical": 10
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% 󱐋",
+        "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
-    "b#!/usr/bin/env bash
-
-DIR=~/.config/hypr/hyprpaperssss
-
-echo $DIR
-
-PICS=($(ls $DIR -I '*.json'))
-
-RANDOMPICS=${PICS[ $RANDOM % ${#PICS[@]} ]}
-
-swww query || swww init
-
-echo Setting ${DIR}/${RANDOMPICS}
-
-swww img ${DIR}/${RANDOMPICS} --transition-fps 60 --transition-type any --transition-duration 3
-
-# Call the update.sh script after the transition is complete
-(sleep 3s && ~/.config/hypr/scripts/pywal.sh) &attery#bat2": {
+    "battery#bat2": {
         "bat": "BAT2"
     },
     "network": {
@@ -169,29 +151,17 @@ swww img ${DIR}/${RANDOMPICS} --transition-fps 60 --transition-type any --transi
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
-   },
-    "custom/spotify": {
-    	"interval": 1,
-	"return-type": "json",
-	"exec": "~/.config/waybar/scripts/spotify.sh",
-	"exec-if": "pgrep spotify",
-	"escape": true
-
     },
-    "custom/launcher":{
-        "format": " ",
-        "on-click": "rofi -show drun",
-        "on-click-right": "killall rofi"
-    },
-    "custom/power":{
-        "format": " ",
-        "on-click": "bash ~/.config/rofi/leave/leave.sh",
-    },
-    // The code following below is given in the great documentation for Waybar status bar under Useful Utilities in Hyprland wiki
-    "hyrpland/workspaces": {
-    	"format": "{icon}",
-	"on-scroll-up": "hyprctl dispatch workspace e+1",
-	"on-scroll-down": "hyprctl dispatch workspace e-1",
-	"on-click": "activate"
-	}
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    }
 }

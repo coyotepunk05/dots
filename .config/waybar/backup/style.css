@@ -52,10 +52,6 @@ window#waybar.chromium {
 	border-radius: 10px;
 	background: #201c1c;
 	transition: none;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
 }
 
 #workspaces button {
@@ -75,13 +71,11 @@ window#waybar.chromium {
 
 #workspaces button.active {
 	color: #FFFFFF;
-        /*border-top: 2px solid #FFFFFF;
-        border-bottom: 2px solid #FFFFFF;*/
-	/*border-radius: 3px;*/
+        border-top: 2px solid #FFFFFF;
+        border-bottom: 2px solid #FFFFFF;
 }
 
 #workspaces button:hover {
-
 	transition: none;
 	box-shadow: inherit;
 	text-shadow: inherit;
@@ -105,11 +99,6 @@ window#waybar.chromium {
 	transition: none;
 	color: @color13;
 	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
 }
 
 #pulseaudio {
@@ -122,11 +111,6 @@ window#waybar.chromium {
 	transition: none;
 	color: @color13;
 	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
 }
 
 #battery {
@@ -139,21 +123,11 @@ window#waybar.chromium {
 	transition: none;
 	color: @color13;
 	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
 }
 
 #battery.charging, #battery.plugged {
-	color: @color13;
-    	background-color: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
+	color: #FFFFFF;
+    background-color: #03AC13;
 }
 
 #battery.critical:not(.charging) {
@@ -183,23 +157,19 @@ window#waybar.chromium {
 	transition: none;
 	color: @color13;
 	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
 }
-
 #clock {
 	margin-top: 8px;
 	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
 	margin-bottom: 0px;
 	border-radius: 10px;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
+	transition: none;
 	color: @color13;
-	padding: 4px 10px;
-	border: 2.5px solid transparent;
-	background-clip: padding-box, border-box;
+	/*color: @color13;*/
+	background: #201c1c;
+	/*background: #1A1826;*/
 }
 
 #memory {
@@ -212,11 +182,6 @@ window#waybar.chromium {
 	transition: none;
 	color: @color13;
 	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
 }
 
 #cpu {
@@ -229,11 +194,6 @@ window#waybar.chromium {
 	transition: none;
 	color: @color13;
 	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
 }
 
 #tray {
@@ -246,11 +206,6 @@ window#waybar.chromium {
 	transition: none;
 	color: #B5E8E0;
 	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
 }
 
 #custom-launcher {
@@ -313,11 +268,6 @@ window#waybar.chromium {
         transition: none;
         color: @color13;
         background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
 }
 
 #idle_inhibitor.activated {
@@ -330,11 +280,6 @@ window#waybar.chromium {
         transition: none;
         color: @color20;
         background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: #FFFFFF;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
 }
 
 #temperature {
@@ -347,9 +292,4 @@ window#waybar.chromium {
         transition: none;
         color: @color13;
         background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
 }
