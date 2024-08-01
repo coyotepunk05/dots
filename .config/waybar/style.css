@@ -301,6 +301,11 @@ window#waybar.chromium {
 	transition: none;
 	color: @color13;
 	background: #201c1c;
+	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
+	color: @color13;
+	border: 2.5px solid transparent;
+    	background-clip: padding-box, border-box;
+
 }
 
 #idle_inhibitor.deactivated {
