@@ -620,7 +620,7 @@
         "ValidReply": {
             "enabled": false
         },
-        "WatchTogetherAdblock": {
+        "YoutubeAdblock": {
             "enabled": false
         }
     },
@@ -634,6 +634,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1722479626985
+        "settingsSyncVersion": 1722553389570
     }
 }
