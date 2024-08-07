@@ -5,12 +5,13 @@
     "useQuickCss": true,
     "themeLinks": [],
     "enabledThemes": [
-        "pywal-discord-default.theme.css",
-        "pywal-discord-pywal.theme.css"
+        "pywal-vencord3.theme.css",
+        "pywal-discord-pywal.theme.css",
+        "pywal-vencord.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": false,
-    "transparent": false,
+    "transparent": true,
     "winCtrlQ": false,
     "disableMinSize": false,
     "winNativeTitleBar": false,
@@ -466,7 +467,8 @@
         "TypingIndicator": {
             "enabled": true,
             "includeMutedChannels": false,
-            "includeCurrentChannel": true
+            "includeCurrentChannel": true,
+            "indicatorMode": 3
         },
         "TypingTweaks": {
             "enabled": true,
@@ -634,6 +636,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1722553389570
+        "settingsSyncVersion": 1723002927355
     }
 }
