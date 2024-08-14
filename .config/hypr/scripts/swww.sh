@@ -16,8 +16,8 @@ echo Setting ${DIR}/${RANDOMPICS}
 
 swww img ${DIR}/${RANDOMPICS} --transition-fps 60 --transition-type grow --transition-pos 0,1600 --transition-duration 3
 
+wal -i "${DIR}/${RANDOMPICS}" -n
+
 pywalfox update
 
 pywal-discord -p ~/.config/vesktop/themes -t pywal
-
-wal -i "${DIR}/${RANDOMPICS}" -n

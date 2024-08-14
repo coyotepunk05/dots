@@ -11,24 +11,25 @@
     /* font-style: italic; */
 
     /* *.background */
-    --background-primary: {background}00;
+    --background-primary: {background}50;
     --background-secondary: {background}35;
     --background-tertiary: {background}60;
+    --background: {background}00;
 
-    --background-primary-alt: {background};
-    --background-secondary-alt: {background};
-    --background-tertiary-alt: {background};
+    --background-primary-alt: {background}50;
+    --background-secondary-alt: {background}00;
+    --background-tertiary-alt: {background}00;
 
-    --channeltextarea-background: {background};
+    --channeltextarea-background: {background}50;
 
-    --profile-gradient-primary-color: {background};
-    --profile-gradient-secondary-color: {background};
-    --profile-body-background-color: {background};
+    --profile-gradient-primary-color: {background}50;
+    --profile-gradient-secondary-color: {background}50;
+    --profile-body-background-color: {background}50;
 
     --__header-bar-background: {background}50 !important;
 
     --scrollbar-auto-track: {background}90;
-    --scrollbar-thin-track: {background};
+    --scrollbar-thin-track: {background}50;
 
     /* primary.* */
     --primary-630: {background};
