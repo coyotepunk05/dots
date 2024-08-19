@@ -153,6 +153,7 @@ swww img ${DIR}/${RANDOMPICS} --transition-fps 60 --transition-type any --transi
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
+        "ignored-sinks": ["JamesDSP Sink"],
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
@@ -168,7 +169,7 @@ swww img ${DIR}/${RANDOMPICS} --transition-fps 60 --transition-type any --transi
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "sh ~/.config/hypr/scripts/pavucontrol.sh"
    },
     "custom/spotify": {
     	"interval": 1,
