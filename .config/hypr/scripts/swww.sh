@@ -4,7 +4,8 @@ DIR=~/.config/hypr/hyprpaperssss
 
 echo $DIR
 
-PICS=($(ls $DIR -I '*.json'))
+PICS=($(ls $DIR))
+#PICS=($(ls $DIR -I '*.json'))
 
 #echo "$PICS"
 
