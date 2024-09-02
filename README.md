@@ -51,7 +51,7 @@ https://github.com/user-attachments/assets/96684890-841e-40c8-8ed4-06b247ac744e
 **Required packages, and what I use:**
 
 <br />
-Making my build psuedo reproducable (post archinstall with Hyprland):
+All my applications (mostly for my reference):
 
 ```
 yay -S firefox neovim pacman-contrib reflector waybar pywal-16-colors wofi swappy grim slurp hyprpicker wl-clipboard thunar gvfs thunar-archive-plugin file-roller stow swaync github-cli filelight lxtask p7zip wlogout phoronix-test-suite hyprlock hypridle wayland-logout xdg-desktop-portal-hyprland powertop auto-cpufreq tlp alsa-utils pavucontrol brightnessctl bluez bluez-utils blueman network-manager-applet ttf-jetbrains-mono-nerd ttf-roboto-mono noto-fonts-emoji noto-fonts noto-fonts-cjk noto-fonts-extra ttf-font-awesome python-pywalfox nwg-look swww cava jp2a w3m spicetify-cli oh-my-bash-git blesh-git starship fastfetch rose-pine-cursor rose-pine-hyprcursor vesktop spotify visual-studio-code-bin steam jamesdsp
