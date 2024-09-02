@@ -1,3 +1,14 @@
+**Pywal integrated with most common applications**
+https://github.com/user-attachments/assets/099a3166-9c1f-468f-a29c-474399475d7e
+
+**Usable Waybar setup with dropdown menus for audio EQ, audio output, internet, and bluetooth.**
+
+
+https://github.com/user-attachments/assets/4d5dca55-6143-4813-9629-52139856baab
+
+
+
+
 Making my build psuedo reproducable:
 
 ```
