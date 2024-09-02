@@ -1,15 +1,7 @@
 **Pywal integrated with most common applications**
-
- <video loop src="https://github.com/user-attachments/assets/f5b6ba24-4327-4e10-83cd-13a8c67d4401">  video </video> 
-
-
-
-
+https://github.com/user-attachments/assets/288e1c8c-e2bc-47d5-a1e3-1746b06963b5
 **Usable Waybar setup with dropdown menus for audio EQ, audio output, internet, and bluetooth.**
-
-
-
-https://github.com/user-attachments/assets/23976198-4db0-488c-b20b-ff4ad8bdf4e0
+https://github.com/user-attachments/assets/96684890-841e-40c8-8ed4-06b247ac744e
 
 
 
