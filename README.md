@@ -1,18 +1,56 @@
-
 ![image](https://github.com/user-attachments/assets/7b50bbbc-d009-456d-928f-7b2178db180b)
 
-**Pywal integrated with most common applications**
+<br />
+<br />
+<br />
+
+```
+ /$$$$$$$                                    /$$
+| $$__  $$                                  | $$
+| $$  \ $$ /$$   /$$ /$$  /$$  /$$  /$$$$$$ | $$
+| $$$$$$$/| $$  | $$| $$ | $$ | $$ |____  $$| $$
+| $$____/ | $$  | $$| $$ | $$ | $$  /$$$$$$$| $$
+| $$      | $$  | $$| $$ | $$ | $$ /$$__  $$| $$
+| $$      |  $$$$$$$|  $$$$$/$$$$/|  $$$$$$$| $$
+|__/       \____  $$ \_____/\___/  \_______/|__/
+           /$$  | $$                            
+          |  $$$$$$/                            
+           \______/
+
+integrated with many common applications
+```
 
 https://github.com/user-attachments/assets/288e1c8c-e2bc-47d5-a1e3-1746b06963b5
 
-**Usable Waybar setup with dropdown menus for audio EQ, audio output, internet, and bluetooth.**
+<br />
+<br />
+<br />
+
+```
+ /$$      /$$                     /$$                          
+| $$  /$ | $$                    | $$                          
+| $$ /$$$| $$  /$$$$$$  /$$   /$$| $$$$$$$   /$$$$$$   /$$$$$$ 
+| $$/$$ $$ $$ |____  $$| $$  | $$| $$__  $$ |____  $$ /$$__  $$
+| $$$$_  $$$$  /$$$$$$$| $$  | $$| $$  \ $$  /$$$$$$$| $$  \__/
+| $$$/ \  $$$ /$$__  $$| $$  | $$| $$  | $$ /$$__  $$| $$      
+| $$/   \  $$|  $$$$$$$|  $$$$$$$| $$$$$$$/|  $$$$$$$| $$      
+|__/     \__/ \_______/ \____  $$|_______/  \_______/|__/      
+                        /$$  | $$                              
+                       |  $$$$$$/                              
+                        \______/
+
+Usable setup with dropdown menus for audio EQ, audio output, internet, and bluetooth.
+```
 
 https://github.com/user-attachments/assets/96684890-841e-40c8-8ed4-06b247ac744e
 
+<br />
+<br />
+<br />
 
+**Required packages, and what I use:**
 
-
-
+<br />
 Making my build psuedo reproducable (post archinstall with Hyprland):
 
 ```
