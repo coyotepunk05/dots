@@ -1,4 +1,6 @@
-@import "wal/colors-waybar.css";
+/*@import "wal/colors-waybar.css";*/
+@import "/home/cody/.cache/wal/colors-waybar.css";
+/*CHANGE THIS ^^ TO MAKE IT WORK FOR YOUR USERNAME*/
 
 * {
 	border: none;

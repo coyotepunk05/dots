@@ -617,13 +617,13 @@
         "Summaries": {
             "enabled": false
         },
-        "ShowAllRoles": {
-            "enabled": false
-        },
         "ValidReply": {
             "enabled": false
         },
         "YoutubeAdblock": {
+            "enabled": false
+        },
+        "AlwaysExpandRoles": {
             "enabled": false
         }
     },
@@ -637,6 +637,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1723016725967
+        "settingsSyncVersion": 1725160019737
     }
 }
