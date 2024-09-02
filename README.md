@@ -1,6 +1,6 @@
 **Pywal integrated with most common applications**
 
- <video loop src="[movie.mp4](https://github.com/user-attachments/assets/f5b6ba24-4327-4e10-83cd-13a8c67d4401)">  video </video> 
+ <video loop src="https://github.com/user-attachments/assets/f5b6ba24-4327-4e10-83cd-13a8c67d4401">  video </video> 
 
 
 
