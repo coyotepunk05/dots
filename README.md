@@ -1,3 +1,6 @@
+
+![image](https://github.com/user-attachments/assets/7b50bbbc-d009-456d-928f-7b2178db180b)
+
 **Pywal integrated with most common applications**
 
 https://github.com/user-attachments/assets/288e1c8c-e2bc-47d5-a1e3-1746b06963b5
