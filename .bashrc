@@ -150,6 +150,8 @@ source "$OSH"/oh-my-bash.sh
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
 
+alias btop="btop -t"
+
 alias vi="nvim"
 
 function yy() {
