@@ -43,6 +43,7 @@ Usable setup with dropdown menus for audio EQ, audio output, internet, and bluet
 ```
 
 https://github.com/user-attachments/assets/96684890-841e-40c8-8ed4-06b247ac744e
+
 <br />
 <br />
 <br />
