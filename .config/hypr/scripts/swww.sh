@@ -15,9 +15,15 @@ swww query || swww init
 
 echo Setting ${DIR}/${RANDOMPICS}
 
+wal -i "${DIR}/${RANDOMPICS}" -n &
+
+sleep 0.7s
+
 swww img ${DIR}/${RANDOMPICS} --transition-fps 60 --transition-type grow --transition-pos 0,1600 --transition-duration 3
 
-wal -i "${DIR}/${RANDOMPICS}" -n
+cp ~/.cache/wal/cava.colors ~/.config/cava/config && cp ~/.cache/wal/colors-waybar.css ~/.config/waybar/colors-waybar.css && cp ~/.cache/wal/colors-waybar.css ~/.config/wlogout/colors-waybar.css && cp ~/.cache/wal/colors-waybar.css ~/.config/hyprsw/colors-waybar.css
+
+killall hyprswitch && hyprswitch init --switch-ws-on-hover --custom-css ~/.config/hyprsw/hyprsw.css
 
 pywalfox update
 

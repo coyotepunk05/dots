@@ -230,7 +230,7 @@
  gradient = 1
  gradient_count = 2
  gradient_color_1 = '{color4}'
- gradient_color_2 = '{color7}'
+ gradient_color_2 = '{color5}'
 #; gradient_color_3 = '#a6cc33'
 #; gradient_color_4 = '#cccc33'
 #; gradient_color_5 = '#cca633'
