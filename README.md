@@ -43,8 +43,26 @@ Usable setup with dropdown menus for audio EQ, audio output, internet, and bluet
 ```
 
 https://github.com/user-attachments/assets/96684890-841e-40c8-8ed4-06b247ac744e
-
 <br />
+<br />
+<br />
+**Binds:**
+<br />
+```
+Kitty:..............................Super+Q
+Wofi:...............................Super+R
+Thunar:.............................Super+E
+Toggle Waybar:......................Super+W
+Exit:...............................Super+C
+Toggle Fullscreen:..................Super+F
+Wlogout:............................Super+L
+Wayland-Logout:.....................Super+M
+Switch Wallpaper:...................Super+X
+Screenshot:.........................Super+Shift+S
+Pick Color:.........................Super+Alt+Shift+S
+Switch to [X] Workspace:............Super+[X]
+Send Application to [X] Workspace:..Super+Shift+[X]
+```
 <br />
 <br />
 
