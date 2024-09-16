@@ -49,6 +49,7 @@ https://github.com/user-attachments/assets/96684890-841e-40c8-8ed4-06b247ac744e
 <br />
 **Binds:**
 <br />
+
 ```
 Kitty:..............................Super+Q
 Wofi:...............................Super+R
@@ -64,6 +65,7 @@ Pick Color:.........................Super+Alt+Shift+S
 Switch to [X] Workspace:............Super+[X]
 Send Application to [X] Workspace:..Super+Shift+[X]
 ```
+
 <br />
 <br />
 
