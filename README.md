@@ -64,6 +64,7 @@ Screenshot:.........................Super+Shift+S
 Pick Color:.........................Super+Alt+Shift+S
 Switch to [X] Workspace:............Super+[X]
 Send Application to [X] Workspace:..Super+Shift+[X]
+View and Switch Apps:...............Alt+Tab
 ```
 
 <br />
