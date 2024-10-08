@@ -169,4 +169,4 @@ export PATH=$PATH:/home/cody/.spicetify
 eval "$(starship init bash)"
 
 # Add this line at the end of .bashrc:
-[[ ${BLE_VERSION-} ]] && ble-attach
+# [[ ${BLE_VERSION-} ]] && ble-attach
