@@ -50,6 +50,3 @@ if [ -n "$RANDOMPICS" ]; then
     hyprswitch init --switch-ws-on-hover --custom-css ~/.config/hyprsw/hyprsw.css &
   fi
 fi
-
-# Clean up the temporary file
-rm "$TEMP_FILE"
