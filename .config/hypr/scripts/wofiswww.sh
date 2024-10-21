@@ -30,7 +30,7 @@ if [ -n "$RANDOMPICS" ]; then
 
   echo Setting ${RANDOMPICS}
 
-  wal -i "${RANDOMPICS}" -n &
+  wal -i "${RANDOMPICS}" -n
 
   sleep 0.7s
 

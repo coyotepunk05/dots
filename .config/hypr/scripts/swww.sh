@@ -15,7 +15,7 @@ swww query || swww init
 
 echo Setting ${DIR}/${RANDOMPICS}
 
-wal -i "${DIR}/${RANDOMPICS}" -n &
+wal -i "${DIR}/${RANDOMPICS}" -n
 
 sleep 0.7s
 
