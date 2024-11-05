@@ -40,13 +40,13 @@ if [ -n "$RANDOMPICS" ]; then
 
   cp ~/.cache/wal/cava.colors ~/.config/cava/config && cp ~/.cache/wal/colors-waybar.css ~/.config/waybar/colors-waybar.css && cp ~/.cache/wal/colors-waybar.css ~/.config/wlogout/colors-waybar.css && cp ~/.cache/wal/colors-waybar.css ~/.config/hyprsw/colors-waybar.css
 
-  killall hyprswitch && hyprswitch init --switch-ws-on-hover --custom-css ~/.config/hyprsw/hyprsw.css
+  killall hyprswitch && hyprswitch init --custom-css ~/.config/hyprsw/hyprsw.css
 
   pywal-discord -p ~/.config/vesktop/themes -t pywal-discord
 
   if pgrep -x "hyprswitch" >/dev/null; then
     pkill -x "hyprswitch"
   else
-    hyprswitch init --switch-ws-on-hover --custom-css ~/.config/hyprsw/hyprsw.css &
+    hyprswitch init --custom-css ~/.config/hyprsw/hyprsw.css &
   fi
 fi
