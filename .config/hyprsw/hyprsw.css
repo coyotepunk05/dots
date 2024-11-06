@@ -4,6 +4,10 @@
     margin: 15px;
 }
 
+.index{
+  opacity: 0;
+}
+
 /*.client-index {*/
 /*    margin: 6px;*/
 /*    padding: 5px;*/
@@ -57,4 +61,8 @@ window {
 	  color: @color13;
 	  border: 3px solid;
 	  /*background-clip: padding-box, border-box;*/
+}
+
+.monitor {
+  opacity: 0.9;
 }
