@@ -48,7 +48,7 @@ window#waybar.chromium {
 }
 #workspaces {
 	margin-top: 8px;
-	margin-left: 12px;
+	margin-left: 8px;
 	font-size: 4px;
 	margin-bottom: 0px;
 	border-radius: 10px;
@@ -96,6 +96,10 @@ window#waybar.chromium {
     color: #E8A2AF;
 }
 
+#network:hover {
+  color: #FFFFFF;
+}
+
 #network {
 	margin-top: 8px;
 	margin-left: 8px;
@@ -114,6 +118,10 @@ window#waybar.chromium {
 
 }
 
+#pulseaudio:hover {
+  color: #FFFFFF;
+}
+
 #pulseaudio {
 	margin-top: 8px;
 	margin-left: 8px;
@@ -129,6 +137,10 @@ window#waybar.chromium {
 	border: 2.5px solid transparent;
     	background-clip: padding-box, border-box;
 
+}
+
+#battery:hover {
+  color: #FFFFFF;
 }
 
 #battery {
@@ -175,6 +187,10 @@ window#waybar.chromium {
     }
 }
 
+#backlight:hover {
+  color: #FFFFFF;
+}
+
 #backlight {
 	margin-top: 8px;
 	margin-left: 8px;
@@ -192,6 +208,10 @@ window#waybar.chromium {
 
 }
 
+#clock:hover {
+  color: #FFFFFF;
+}
+
 #clock {
 	margin-top: 8px;
 	margin-left: 8px;
@@ -202,6 +222,10 @@ window#waybar.chromium {
 	padding: 4px 10px;
 	border: 2.5px solid transparent;
 	background-clip: padding-box, border-box;
+}
+
+#memory:hover {
+  color: #FFFFFF;
 }
 
 #memory {
@@ -219,6 +243,11 @@ window#waybar.chromium {
 	border: 2.5px solid transparent;
     	background-clip: padding-box, border-box;
 
+}
+
+
+#cpu:hover {
+  color: #FFFFFF;
 }
 
 #cpu {
@@ -256,15 +285,23 @@ window#waybar.chromium {
 }
 
 #custom-launcher {
-	font-size: 24px;
 	margin-top: 8px;
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 5px;
+	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-    color: #89DCEB;
-    background: #201c1c;
+	color: @color13;
+	background: #201c1c;
+	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
+	color: @color13;
+	border: 2.5px solid transparent;
+    	background-clip: padding-box, border-box;
+}
+
+#custom-launcher:hover {
+  color: #FFFFFF;
 }
 
 #custom-power {
@@ -342,6 +379,14 @@ window#waybar.chromium {
 	border: 2.5px solid transparent;
     	background-clip: padding-box, border-box;
 
+}
+
+#idle_inhibitor:hover {
+  color: #FFFFFF;
+}
+
+#temperature:hover {
+  color: #FFFFFF;
 }
 
 #temperature {

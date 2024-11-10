@@ -6,7 +6,7 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "tray", "custom/spotify", "hyprland/window"],
+    "modules-left": ["custom/launcher", "hyprland/workspaces", "tray", "custom/spotify", "hyprland/window"],
     "modules-center": ["clock"],
     "modules-right": ["idle_inhibitor", "backlight",  "pulseaudio", "cpu", "memory", "temperature", "keyboard-state", "sway/language", "battery", "network"],
     // Modules configuration
@@ -91,10 +91,12 @@
     },
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": false
+        "tooltip": false,
+        "on-click": "sh ~/.config/hypr/scripts/lxtask.sh"
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% ",
+        "on-click": "sh ~/.config/hypr/scripts/lxtask.sh"
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -102,7 +104,8 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""],
+        "on-click": "sh ~/.config/hypr/scripts/lxtask.sh"
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -182,8 +185,8 @@ swww img ${DIR}/${RANDOMPICS} --transition-fps 60 --transition-type any --transi
     },
     "custom/launcher":{
         "format": " ",
-        "on-click": "rofi -show drun",
-        "on-click-right": "killall rofi"
+        "on-click": "sh ~/.config/hypr/scripts/wofiwaybar.sh",
+        "on-click-right": "wlogout"
     },
     "custom/power":{
         "format": " ",

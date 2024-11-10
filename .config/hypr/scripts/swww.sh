@@ -29,7 +29,7 @@ killall hyprswitch && hyprswitch init --custom-css ~/.config/hyprsw/hyprsw.css
 
 pywal-discord -p ~/.config/vesktop/themes -t pywal-discord
 
-if pgrep -x "hyprswitch" >/dev/null; then
+if pgrep -x "hyprswitch"; then
   pkill -x "hyprswitch"
 else
   exec-once = hyprswitch init --custom-css ~/.config/hyprsw/hyprsw.css &

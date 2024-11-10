@@ -11,11 +11,11 @@ window{
 	background-color: rgba(50, 50, 50, 0.9);
 	border-radius: 17px;
 	#border-bottom: 3px solid orange;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
+	background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.89)) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
 	color: @color13;
 	border: 3.5px solid transparent;
   background-clip: padding-box, border-box;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 #entry{
@@ -33,7 +33,7 @@ window{
 }
 
 #input{
-	background-color: rgba(50, 50, 50, 0.5);
+	background-color: rgba(50, 50, 50, 0);
 	color: @color13;
 	padding: 0.15em;
 	border-radius: 17px;
