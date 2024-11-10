@@ -44,7 +44,7 @@ if [ -n "$RANDOMPICS" ]; then
 
   pywal-discord -p ~/.config/vesktop/themes -t pywal-discord
 
-  if pgrep -x "hyprswitch" >/dev/null; then
+  if pgrep -x "hyprswitch"; then
     pkill -x "hyprswitch"
   else
     hyprswitch init --custom-css ~/.config/hyprsw/hyprsw.css &
