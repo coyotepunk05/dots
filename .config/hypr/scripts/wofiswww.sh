@@ -3,25 +3,40 @@
 # Directory containing your wallpapers
 DIR="$HOME/.config/hypr/hyprpaperssss"
 
-# Generate a list of wallpapers with image previews only
-WALLPAPER_LIST=$(ls "$DIR" | while read -r file; do
-  echo "img:$DIR/$file"
+# Directory for thumbnails
+THUMBNAIL_DIR="$DIR/thumbnails"
+
+# Create the thumbnail directory if it doesn't exist
+mkdir -p "$THUMBNAIL_DIR"
+
+# Generate a list of wallpapers with image previews only (thumbnails)
+WALLPAPER_LIST=$(find "$DIR" -type f ! -path "$DIR/thumbnails/*" | while read -r file; do
+  THUMBNAIL_PATH="$THUMBNAIL_DIR/$(basename "$file")"
+
+  # Only resize and create the thumbnail if it doesn't already exist
+  if [ ! -f "$THUMBNAIL_PATH" ]; then
+    # Resize the image to a thumbnail (200x200 px) using magick
+    magick "$DIR/$file" -resize 200x200^ "$THUMBNAIL_PATH"
+  fi
+
+  # Output the path of the thumbnail for Wofi
+  echo "img:$THUMBNAIL_PATH"
 done)
+
+# Generate a list of wallpapers with image previews only
+# WALLPAPER_LIST=$(ls "$DIR" | while read -r file; do
+#   echo "img:$DIR/$file"
+# done)
 
 # Use Wofi to select a wallpaper with previews
 SELECTED_ENTRY=$(echo "$WALLPAPER_LIST" | wofi -c ~/.config/wofi/configswww -s ~/.config/wofi/styleswww.css --dmenu --prompt "Select Wallpaper" --allow-images --width 900 --height 900 -w 4)
 
 # Extract the selected wallpaper filename and store it in a variable
-RANDOMPICS=$(echo "$SELECTED_ENTRY" | awk -F: '{print $2}')
+RANDOMPICS=$(echo "$SELECTED_ENTRY" | awk -F: '{print $2}' | sed 's|thumbnails/||')
 
 # Debug: Print the selected wallpaper filename
 echo "Selected wallpaper: $RANDOMPICS"
 TEMP_FILE=$(mktemp)
-
-# Generate a list of wallpapers with image previews only
-WALLPAPER_LIST=$(ls "$DIR" | while read -r file; do
-  echo "img:$DIR/$file"
-done)
 
 # Set the selected wallpaper
 if [ -n "$RANDOMPICS" ]; then
