@@ -16,7 +16,7 @@ WALLPAPER_LIST=$(find "$DIR" -type f ! -path "$DIR/thumbnails/*" | while read -r
   # Only resize and create the thumbnail if it doesn't already exist
   if [ ! -f "$THUMBNAIL_PATH" ]; then
     # Resize the image to a thumbnail (200x200 px) using magick
-    magick "$DIR/$file" -resize 200x200^ "$THUMBNAIL_PATH"
+    magick "$file" -resize 200x200^ "$THUMBNAIL_PATH"
   fi
 
   # Output the path of the thumbnail for Wofi
