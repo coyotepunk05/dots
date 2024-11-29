@@ -23,11 +23,6 @@ WALLPAPER_LIST=$(find "$DIR" -type f ! -path "$DIR/thumbnails/*" | while read -r
   echo "img:$THUMBNAIL_PATH"
 done)
 
-# Generate a list of wallpapers with image previews only
-# WALLPAPER_LIST=$(ls "$DIR" | while read -r file; do
-#   echo "img:$DIR/$file"
-# done)
-
 # Use Wofi to select a wallpaper with previews
 SELECTED_ENTRY=$(echo "$WALLPAPER_LIST" | wofi -c ~/.config/wofi/configswww -s ~/.config/wofi/styleswww.css --dmenu --prompt "Select Wallpaper" --allow-images --width 900 --height 900 -w 4)
 
@@ -55,13 +50,14 @@ if [ -n "$RANDOMPICS" ]; then
 
   cp ~/.cache/wal/cava.colors ~/.config/cava/config && cp ~/.cache/wal/colors-waybar.css ~/.config/waybar/colors-waybar.css && cp ~/.cache/wal/colors-waybar.css ~/.config/wlogout/colors-waybar.css && cp ~/.cache/wal/colors-waybar.css ~/.config/hyprsw/colors-waybar.css
 
-  killall hyprswitch && hyprswitch init --custom-css ~/.config/hyprsw/hyprsw.css
-
-  pywal-discord -p ~/.config/vesktop/themes -t pywal-discord
+  killall hyprswitch && hyprswitch init --workspaces-per-row 4 --size-factor 4.5 --custom-css ~/.config/hyprsw/hyprsw.css
 
   if pgrep -x "hyprswitch"; then
     pkill -x "hyprswitch"
   else
-    hyprswitch init --custom-css ~/.config/hyprsw/hyprsw.css &
+    hyprswitch init --workspaces-per-row 4 --size-factor 4.5 --custom-css ~/.config/hyprsw/hyprsw.css &
   fi
+
+  pywal-discord -p ~/.config/vesktop/themes -t pywal-discord
+
 fi

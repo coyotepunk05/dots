@@ -139,7 +139,7 @@ window#waybar.chromium {
 
 }
 
-#battery:hover {
+#battery:hover, #battery.charging:hover, #battery.plugged:hover {
   color: #FFFFFF;
 }
 
@@ -328,6 +328,10 @@ window#waybar.chromium {
 	transition: none;
 	color: @color13;
 	background: #201c1c;
+}
+
+#custom-spotify:hover {
+  color: #FFFFFF;
 }
 
 #custom-spotify {

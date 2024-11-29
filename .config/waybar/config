@@ -176,6 +176,7 @@ swww img ${DIR}/${RANDOMPICS} --transition-fps 60 --transition-type any --transi
         "on-click": "sh ~/.config/hypr/scripts/pavucontrol.sh"
    },
     "custom/spotify": {
+      "on-click": "sh ~/.config/hypr/scripts/switch2spotify.sh",
     	"interval": 1,
 	"return-type": "json",
 	"exec": "~/.config/waybar/scripts/spotify.sh",

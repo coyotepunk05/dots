@@ -25,12 +25,12 @@ pywalfox update
 
 cp ~/.cache/wal/cava.colors ~/.config/cava/config && cp ~/.cache/wal/colors-waybar.css ~/.config/waybar/colors-waybar.css && cp ~/.cache/wal/colors-waybar.css ~/.config/wlogout/colors-waybar.css && cp ~/.cache/wal/colors-waybar.css ~/.config/hyprsw/colors-waybar.css
 
-killall hyprswitch && hyprswitch init --custom-css ~/.config/hyprsw/hyprsw.css
+killall hyprswitch && hyprswitch init --workspaces-per-row 4 --size-factor 4.5 --custom-css ~/.config/hyprsw/hyprsw.css
 
 pywal-discord -p ~/.config/vesktop/themes -t pywal-discord
 
 if pgrep -x "hyprswitch"; then
   pkill -x "hyprswitch"
 else
-  exec-once = hyprswitch init --custom-css ~/.config/hyprsw/hyprsw.css &
+  hyprswitch init --workspaces-per-row 4 --size-factor 4.5 --custom-css ~/.config/hyprsw/hyprsw.css &
 fi
