@@ -7,7 +7,7 @@
     "enabledThemes": [
         "pywal-vencord3.theme.css",
         "pywal-discord-pywal.theme.css",
-        "pywal-vencord.theme.css"
+        "colors-discord-3.css"
     ],
     "enableReactDevtools": false,
     "frameless": false,
@@ -83,7 +83,8 @@
             "keepIcons": false,
             "closeAllFolders": false,
             "forceOpen": false,
-            "sidebarAnim": true
+            "sidebarAnim": true,
+            "closeOthers": false
         },
         "BetterGifAltText": {
             "enabled": false
@@ -319,7 +320,11 @@
         },
         "OpenInApp": {
             "enabled": true,
-            "spotify": true
+            "spotify": true,
+            "steam": true,
+            "epic": true,
+            "tidal": true,
+            "itunes": true
         },
         "OverrideForumDefaults": {
             "enabled": false
@@ -502,7 +507,9 @@
             "enabled": false
         },
         "ViewIcons": {
-            "enabled": true
+            "enabled": true,
+            "format": "webp",
+            "imgSize": "1024"
         },
         "ViewRaw": {
             "enabled": false
@@ -663,6 +670,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1732616099344
+        "settingsSyncVersion": 1733032206464
     }
 }
