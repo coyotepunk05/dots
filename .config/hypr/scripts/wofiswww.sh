@@ -52,12 +52,12 @@ if [ -n "$RANDOMPICS" ]; then
 
   killall hyprswitch && hyprswitch init --workspaces-per-row 4 --size-factor 4.5 --custom-css ~/.config/hyprsw/hyprsw.css
 
+  pywal-discord -p ~/.config/vesktop/themes -t default
+
   if pgrep -x "hyprswitch"; then
     pkill -x "hyprswitch"
   else
     hyprswitch init --workspaces-per-row 4 --size-factor 4.5 --custom-css ~/.config/hyprsw/hyprsw.css &
   fi
-
-  pywal-discord -p ~/.config/vesktop/themes -t pywal-discord
 
 fi
