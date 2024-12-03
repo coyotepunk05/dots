@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-if pgrep -x "lxtask" >/dev/null; then
-  pkill -x "lxtask"
+if pgrep -x "missioncenter" >/dev/null; then
+  pkill -x "missioncenter"
 else
-  lxtask &
+  export GTK_THEME=Adwaita-dark && missioncenter &
 fi

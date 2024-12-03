@@ -187,7 +187,7 @@ swww img ${DIR}/${RANDOMPICS} --transition-fps 60 --transition-type any --transi
     "custom/launcher":{
         "format": " ",
         "on-click": "sh ~/.config/hypr/scripts/wofiwaybar.sh",
-        "on-click-right": "wlogout"
+        "on-click-right": "wlogout -b 5 -T 500 -B 500"
     },
     "custom/power":{
         "format": " ",
