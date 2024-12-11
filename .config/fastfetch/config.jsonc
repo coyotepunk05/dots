@@ -86,6 +86,12 @@
             "keyColor": "blue"
         },
         {
+            "type": "command",
+            "key": "├─󰥔",
+            "text": "sh ~/.config/fastfetch/os_age.sh",
+            "keyColor": "blue"
+        },
+        {
             "type": "kernel",
             "key": "╰─ ",
             "format": "{1} {2}",
