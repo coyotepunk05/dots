@@ -54,15 +54,15 @@ window#waybar.chromium {
 	border-radius: 10px;
 	background: #201c1c;
 	transition: none;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
+	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
+	color: @color2;
 	border: 2.5px solid transparent;
     	background-clip: padding-box, border-box;
 }
 
 #workspaces button {
 	transition: none;
-	color: @color13;
+	color: @color2;
 	background: transparent;
 	font-size: 16px;
 	border-radius: 2px;
@@ -109,10 +109,10 @@ window#waybar.chromium {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: @color13;
+	color: @color2;
 	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
+	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
+	color: @color2;
 	border: 2.5px solid transparent;
     	background-clip: padding-box, border-box;
 
@@ -130,10 +130,10 @@ window#waybar.chromium {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: @color13;
+	color: @color2;
 	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
+	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
+	color: @color2;
 	border: 2.5px solid transparent;
     	background-clip: padding-box, border-box;
 
@@ -152,20 +152,20 @@ window#waybar.chromium {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: @color13;
+	color: @color2;
 	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
+	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
+	color: @color2;
 	border: 2.5px solid transparent;
     	background-clip: padding-box, border-box;
 
 }
 
 #battery.charging, #battery.plugged {
-	color: @color13;
+	color: @color2;
     	background-color: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
+	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
+	color: @color2;
 	border: 2.5px solid transparent;
     	background-clip: padding-box, border-box;
 
@@ -200,10 +200,10 @@ window#waybar.chromium {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: @color13;
+	color: @color2;
 	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
+	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
+	color: @color2;
 	border: 2.5px solid transparent;
     	background-clip: padding-box, border-box;
 
@@ -218,8 +218,8 @@ window#waybar.chromium {
 	margin-left: 8px;
 	margin-bottom: 0px;
 	border-radius: 10px;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
+	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
+	color: @color2;
 	padding: 4px 10px;
 	border: 2.5px solid transparent;
 	background-clip: padding-box, border-box;
@@ -237,13 +237,12 @@ window#waybar.chromium {
 	padding-right: 12px;
 	border-radius: 10px;
 	transition: none;
-	color: @color13;
+	color: @color2;
 	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
+	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
+	color: @color2;
 	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
+  background-clip: padding-box, border-box;
 }
 
 
@@ -259,10 +258,10 @@ window#waybar.chromium {
 	padding-right: 14px;
 	border-radius: 10px;
 	transition: none;
-	color: @color13;
+	color: @color2;
 	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
+	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
+	color: @color2;
 	border: 2.5px solid transparent;
     	background-clip: padding-box, border-box;
 
@@ -278,8 +277,8 @@ window#waybar.chromium {
 	transition: none;
 	color: #B5E8E0;
 	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
+	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
+	color: @color2;
 	border: 2.5px solid transparent;
     	background-clip: padding-box, border-box;
 
@@ -293,10 +292,10 @@ window#waybar.chromium {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: @color13;
+	color: @color2;
 	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
+	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
+	color: @color2;
 	border: 2.5px solid transparent;
     	background-clip: padding-box, border-box;
 }
@@ -315,7 +314,7 @@ window#waybar.chromium {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: @color13;
+	color: @color2;
 	background: #F28FAD;
 }
 
@@ -327,7 +326,7 @@ window#waybar.chromium {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: @color13;
+	color: @color2;
 	background: #201c1c;
 }
 
@@ -343,10 +342,10 @@ window#waybar.chromium {
 	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
-	color: @color13;
+	color: @color2;
 	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
+	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
+	color: @color2;
 	border: 2.5px solid transparent;
     	background-clip: padding-box, border-box;
 
@@ -360,10 +359,10 @@ window#waybar.chromium {
         margin-bottom: 0px;
         border-radius: 10px;
         transition: none;
-        color: @color13;
+        color: @color2;
         background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
+	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
+	color: @color2;
 	border: 2.5px solid transparent;
     	background-clip: padding-box, border-box;
 
@@ -379,7 +378,7 @@ window#waybar.chromium {
         transition: none;
         color: @color20;
         background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
+	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
 	color: #FFFFFF;
 	border: 2.5px solid transparent;
     	background-clip: padding-box, border-box;
@@ -402,10 +401,10 @@ window#waybar.chromium {
         margin-bottom: 0px;
         border-radius: 10px;
         transition: none;
-        color: @color13;
+        color: @color2;
         background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
-	color: @color13;
+	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
+	color: @color2;
 	border: 2.5px solid transparent;
     	background-clip: padding-box, border-box;
 
