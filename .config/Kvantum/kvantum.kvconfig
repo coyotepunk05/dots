@@ -1,2 +1,5 @@
 [General]
-theme=KvGnomeDark
+theme=Fluent-Dark
+
+[Applications]
+Fluent-Dark=dolphin

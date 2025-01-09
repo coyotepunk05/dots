@@ -1,4 +1,7 @@
+MenuBar=Disabled
+
 [General]
+ShowFullPathInTitlebar=true
 Version=202
 ViewPropsTimestamp=2024,12,15,4,8,32.425
 
@@ -9,6 +12,9 @@ Places Icons Static Size=22
 [MainWindow]
 MenuBar=Disabled
 ToolBarsMovable=Disabled
+
+[PreviewSettings]
+Plugins=opendocumentthumbnail,imagethumbnail,cursorthumbnail,windowsexethumbnail,comicbookthumbnail,windowsimagethumbnail,ebookthumbnail,djvuthumbnail,audiothumbnail,jpegthumbnail,appimagethumbnail,svgthumbnail,exrthumbnail,kraorathumbnail,directorythumbnail,gdk-pixbuf-thumbnailer,jxl
 
 [UiSettings]
 ColorScheme=KvGnomeDark
