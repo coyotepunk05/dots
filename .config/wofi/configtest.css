@@ -1,0 +1,70 @@
+@import ".cache/wal/colors-waybar.css";
+
+* {
+    font-family: 'CaskaydiaCove Nerd Font mono';
+    font-size: 14px;
+ }
+
+ /* Window */
+ window {
+    margin: 0px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(32, 28, 28, 0.0);
+ }
+
+ /* Inner Box */
+ #inner-box {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(32, 28, 28, 0.5);
+ }
+
+ /* Outer Box */
+ #outer-box {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    background-color: @color5;
+    border-radius: 5px;
+ }
+
+ /* Scroll */
+ #scroll {
+    margin: 0px;
+    padding: 10px;
+    border: none;
+ }
+
+ /* Input */
+ #input {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    color: @color1;
+    background-color: rgba(32, 28, 28, 0.5);
+    border: 2px solid @color1;
+ }
+
+ /* Text */
+ #text {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    color: #FFFFFF;
+ }
+
+ /* Selected Entry */
+ #entry:selected {
+   background-color: #201C1C;
+   outline: 1px solid @color1;
+ }
+
+ #entry:selected #text {
+    color: #FFFFFF;
+ }
+ image {
+   margin-left: 10px;
+ }

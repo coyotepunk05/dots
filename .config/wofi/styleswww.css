@@ -10,8 +10,8 @@ window{
 	font-family: "Roboto Mono Medium";
 	background-color: rgba(50, 50, 50, 0.9);
 	border-radius: 17px;
-	#border-bottom: 3px solid orange;
-	background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.89)) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
+	border-bottom: 3px solid orange;
+	background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
 	color: @color13;
 	border: 3.5px solid transparent;
   background-clip: padding-box, border-box;

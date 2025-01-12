@@ -1,4 +1,5 @@
 mode=drun
+no_actions=true
 allow_images=true
 image_size=190
 width=600

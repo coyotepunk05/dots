@@ -216,6 +216,7 @@ window#waybar.chromium {
 #clock {
 	margin-top: 8px;
 	margin-left: 8px;
+  margin-right: 8px;
 	margin-bottom: 0px;
 	border-radius: 10px;
 	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
