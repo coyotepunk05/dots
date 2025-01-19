@@ -9,37 +9,24 @@ if [[ -z "$install_timestamp" ]]; then
   exit 1
 fi
 
-# Convert the timestamp to epoch seconds
-install_epoch=$(date -d "$install_timestamp" +%s 2>/dev/null)
+# Convert the timestamp to a formatted date
+formatted_date=$(date -d "$install_timestamp" "+%B %d, %Y" 2>/dev/null)
 if [[ $? -ne 0 ]]; then
   echo "Error: Failed to parse the installation timestamp"
   exit 1
 fi
 
-# Get the current time in seconds since the epoch
-current_epoch=$(date +%s)
+# Convert the day to an ordinal (e.g., 1 -> 1st, 2 -> 2nd)
+ordinal_day=$(date -d "$install_timestamp" "+%d" | sed 's/^0*//')
+case $ordinal_day in
+1 | 21 | 31) suffix="st" ;;
+2 | 22) suffix="nd" ;;
+3 | 23) suffix="rd" ;;
+*) suffix="th" ;;
+esac
 
-# Calculate the age in seconds
-age_seconds=$((current_epoch - install_epoch))
+# Format the final output
+final_date=$(date -d "$install_timestamp" "+%B")" $ordinal_day$suffix, "$(date -d "$install_timestamp" "+%Y")
 
-# Calculate years, days, and hours
-age_years=$((age_seconds / 31536000)) # 1 year = 31536000 seconds
-remaining_seconds=$((age_seconds % 31536000))
-
-age_months=$((remaining_seconds / 2592000)) # 1 month = 2592000 seconds
-remaining_seconds=$((remaining_seconds % 2592000))
-
-age_days=$((remaining_seconds / 86400))           # 1 day = 86400 seconds
-age_hours=$(((remaining_seconds % 86400) / 3600)) # 1 hour = 3600 seconds
-
-# Output the result, including years if applicable
-output=""
-if [[ $age_years -gt 0 ]]; then
-  output+="$age_years Years "
-fi
-if [[ $age_months -gt 0 || $age_years -gt 0 ]]; then
-  output+="$age_months Months "
-fi
-output+="$age_days Days $age_hours Hours"
-
-echo " $output"
+# Output the result
+echo " $final_date"
