@@ -25,6 +25,8 @@ pywalfox update
 
 cp ~/.cache/wal/cava.colors ~/.config/cava/config && cp ~/.cache/wal/colors-waybar.css ~/.config/waybar/colors-waybar.css && cp ~/.cache/wal/colors-waybar.css ~/.config/wlogout/colors-waybar.css && cp ~/.cache/wal/colors-waybar.css ~/.config/hyprsw/colors-waybar.css
 
+sh ~/.config/hypr/scripts/starshipwal/starshipwal_contrast.sh
+
 killall hyprswitch && hyprswitch init --workspaces-per-row 4 --size-factor 4.5 --custom-css ~/.config/hyprsw/hyprsw.css &
 
 pywal-discord -p ~/.config/vesktop/themes -t default

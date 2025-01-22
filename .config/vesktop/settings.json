@@ -2,6 +2,6 @@
     "minimizeToTray": "on",
     "discordBranch": "stable",
     "arRPC": "on",
-    "splashColor": "rgb(198, 199, 204)",
-    "splashBackground": "rgba(28, 33, 54, 0.314)"
+    "splashColor": "rgb(194, 194, 197)",
+    "splashBackground": "rgba(12, 13, 24, 0.314)"
 }

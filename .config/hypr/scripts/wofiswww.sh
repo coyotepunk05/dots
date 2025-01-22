@@ -71,6 +71,8 @@ if [ -n "$RANDOMPICS" ]; then
   cp ~/.cache/wal/colors-waybar.css ~/.config/waybar/colors-waybar.css
   cp ~/.cache/wal/colors-waybar.css ~/.config/wlogout/colors-waybar.css
   cp ~/.cache/wal/colors-waybar.css ~/.config/hyprsw/colors-waybar.css
+  # Update Starship
+  sh ~/.config/hypr/scripts/starshipwal/starshipwal_contrast.sh
 
   # Restart Hyprswitch
   killall hyprswitch
