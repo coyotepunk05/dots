@@ -6,7 +6,7 @@
     //"width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["custom/launcher", "hyprland/workspaces", "tray", "custom/spotify", "hyprland/window"],
+    "modules-left": ["custom/launcher", "hyprland/workspaces", "tray", "custom/spotify"],
     "modules-center": ["clock"],
     "modules-right": ["idle_inhibitor", "backlight",  "pulseaudio", "cpu", "memory", "temperature", "keyboard-state", "sway/language", "battery", "network"],
     // Modules configuration
@@ -176,13 +176,14 @@ swww img ${DIR}/${RANDOMPICS} --transition-fps 60 --transition-type any --transi
         "on-click": "sh ~/.config/hypr/scripts/pavucontrol.sh"
    },
     "custom/spotify": {
-      "on-click": "sh ~/.config/hypr/scripts/switch2spotify.sh",
     	"interval": 1,
 	"return-type": "json",
 	"exec": "~/.config/waybar/scripts/spotify.sh",
 	"exec-if": "pgrep spotify",
+  "on-left-click": "playerctl next",
+  "on-right-click": "playerctl previous",
+  "on-click-middle": "playerctl play-pause",
 	"escape": true
-
     },
     "custom/launcher":{
         "format": " ",

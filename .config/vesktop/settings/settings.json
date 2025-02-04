@@ -348,7 +348,8 @@
             "dmSectionCollapsed": false,
             "canCollapseDmSection": false,
             "userBasedCategoryList": {
-                "387380554187800586": []
+                "387380554187800586": [],
+                "466471033533366273": []
             }
         },
         "PlainFolderIcon": {
@@ -681,6 +682,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1738096853097
+        "settingsSyncVersion": 1738643044099
     }
 }
