@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["custom/launcher", "hyprland/workspaces", "tray", "custom/spotify"],
     "modules-center": ["clock"],
-    "modules-right": ["idle_inhibitor", "backlight",  "pulseaudio", "cpu", "memory", "temperature", "keyboard-state", "sway/language", "battery", "network"],
+    "modules-right": ["idle_inhibitor", "backlight",  "pulseaudio", "cpu", "memory", "keyboard-state", "sway/language", "battery", "network"],
     // Modules configuration
     // "hyprland/workspaces": {
     //     "disable-scroll": true,
@@ -162,8 +162,8 @@ swww img ${DIR}/${RANDOMPICS} --transition-fps 60 --transition-type any --transi
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": "󰝟 {icon} {format_source}",
         "format-muted": "󰝟 {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format-source": "",
+        "format-source-muted": " ",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -180,9 +180,9 @@ swww img ${DIR}/${RANDOMPICS} --transition-fps 60 --transition-type any --transi
 	"return-type": "json",
 	"exec": "~/.config/waybar/scripts/spotify.sh",
 	"exec-if": "pgrep spotify",
-  "on-left-click": "playerctl next",
-  "on-right-click": "playerctl previous",
-  "on-click-middle": "playerctl play-pause",
+  "on-click": "playerctl -p spotify next",
+  "on-click-right": "playerctl -p spotify previous",
+  "on-click-middle": "playerctl -p spotify play-pause",
 	"escape": true
     },
     "custom/launcher":{

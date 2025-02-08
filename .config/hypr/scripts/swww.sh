@@ -13,7 +13,7 @@ RANDOMPICS=${PICS[$RANDOM % ${#PICS[@]}]}
 
 swww query || swww init
 
-echo Setting ${DIR}/${RANDOMPICS}
+# echo Setting ${DIR}/${RANDOMPICS}
 
 wal -i "${DIR}/${RANDOMPICS}" -n
 
@@ -27,12 +27,12 @@ cp ~/.cache/wal/cava.colors ~/.config/cava/config && cp ~/.cache/wal/colors-wayb
 
 sh ~/.config/hypr/scripts/starshipwal/starshipwal_contrast.sh
 
-killall hyprswitch && hyprswitch init --workspaces-per-row 4 --size-factor 4.5 --custom-css ~/.config/hyprsw/hyprsw.css &
+# killall hyprswitch && hyprswitch init --workspaces-per-row 4 --size-factor 4.5 --custom-css ~/.config/hyprsw/hyprsw.css &
 
 pywal-discord -p ~/.config/vesktop/themes -t default
 
-if pgrep -x "hyprswitch"; then
-  pkill -x "hyprswitch"
-else
-  hyprswitch init --workspaces-per-row 4 --size-factor 4.5 --custom-css ~/.config/hyprsw/hyprsw.css &
-fi
+# if pgrep -x "hyprswitch"; then
+#   pkill -x "hyprswitch"
+# else
+#   hyprswitch init --workspaces-per-row 4 --size-factor 4.5 --custom-css ~/.config/hyprsw/hyprsw.css &
+# fi
