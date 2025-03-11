@@ -6,8 +6,8 @@
     "themeLinks": [],
     "enabledThemes": [
         "pywal-vencord3.theme.css",
-        "pywal-discord-pywal.theme.css",
-        "colors-discord-3.css"
+        "colors-discord-3.css",
+        "pywal-discord-pywal.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": false,
@@ -682,6 +682,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1738696180950
-    }
+        "settingsSyncVersion": 1741715268115
+    },
+    "eagerPatches": false
 }

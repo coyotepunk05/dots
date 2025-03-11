@@ -11,7 +11,6 @@ Places Icons Static Size=22
 
 [MainWindow]
 MenuBar=Disabled
-ToolBarsMovable=Disabled
 
 [PreviewSettings]
 Plugins=opendocumentthumbnail,imagethumbnail,cursorthumbnail,windowsexethumbnail,comicbookthumbnail,windowsimagethumbnail,ebookthumbnail,djvuthumbnail,audiothumbnail,jpegthumbnail,appimagethumbnail,svgthumbnail,exrthumbnail,kraorathumbnail,directorythumbnail,gdk-pixbuf-thumbnailer,jxl
