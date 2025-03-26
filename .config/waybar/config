@@ -183,6 +183,8 @@ swww img ${DIR}/${RANDOMPICS} --transition-fps 60 --transition-type any --transi
   "on-click": "playerctl -p spotify next",
   "on-click-right": "playerctl -p spotify previous",
   "on-click-middle": "playerctl -p spotify play-pause",
+  "on-scroll-up": "playerctl -p spotify volume 0.05+",
+  "on-scroll-down": "playerctl -p spotify volume 0.05-",
 	"escape": true
     },
     "custom/launcher":{

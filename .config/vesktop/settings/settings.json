@@ -5,9 +5,7 @@
     "useQuickCss": true,
     "themeLinks": [],
     "enabledThemes": [
-        "pywal-vencord3.theme.css",
-        "colors-discord-3.css",
-        "pywal-discord-pywal.theme.css"
+        "pywal-vencord3.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": false,
@@ -190,7 +188,7 @@
             "enabled": false
         },
         "FriendsSince": {
-            "enabled": false
+            "enabled": true
         },
         "GameActivityToggle": {
             "enabled": true,
@@ -630,7 +628,7 @@
             "enabled": false
         },
         "YoutubeAdblock": {
-            "enabled": false
+            "enabled": true
         },
         "AlwaysExpandRoles": {
             "enabled": false
@@ -660,7 +658,8 @@
             "enabled": false
         },
         "VolumeBooster": {
-            "enabled": false
+            "enabled": true,
+            "multiplier": 2
         },
         "FullUserInChatbox": {
             "enabled": false
@@ -682,7 +681,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1741715268115
+        "settingsSyncVersion": 1742967252542
     },
     "eagerPatches": false
 }
