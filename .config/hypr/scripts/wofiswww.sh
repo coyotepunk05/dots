@@ -53,7 +53,7 @@ if [ -n "$RANDOMPICS" ]; then
 
   # Set the wallpaper with pywal and swww
   echo "Setting wallpaper: ${RANDOMPICS}"
-  wal -i "${RANDOMPICS}" -n
+  wal -i "${RANDOMPICS}" -n -e
   sleep 0.7s
   swww img "${RANDOMPICS}" --transition-fps 60 --transition-type grow --transition-pos 0,1600 --transition-duration 3
 

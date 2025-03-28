@@ -110,6 +110,9 @@
     "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
+        "exec": "cat ~/tmp/hyprsunset_state || echo 6000",
+        "interval": 1,
+        "on-click": "sh ~/.config/hypr/scripts/hyprsunset.sh",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {

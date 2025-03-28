@@ -1,5 +1,9 @@
 MenuBar=Disabled
 
+[ExtractDialog]
+3 screens: Window-Maximized=true
+DirHistory[$e]=$HOME/Downloads/photos_takeout/,$HOME/Downloads/photo_takeout/
+
 [General]
 ShowFullPathInTitlebar=true
 Version=202
