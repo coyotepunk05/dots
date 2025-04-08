@@ -1,3 +1,8 @@
+[General]
+DefaultApplications=video/mp4;mpv.desktop;
+TerminalApplication=kitty
+TerminalService=kitty.desktop
+
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
@@ -24,8 +29,3 @@ Dialog Size=600,480
 [PreviewSettings]
 EnableRemoteFolderThumbnail=false
 MaximumRemoteSize=0
-
-[General]
-TerminalApplication=kitty
-TerminalService=kitty.desktop
-DefaultApplications=video/mp4;mpv.desktop;
