@@ -1,6 +1,5 @@
-# script for hyprlock spotify integration
-# graciously provided (stolen) from justinmdickey
+#!/usr/bin/env bash
 
-song_info=$(playerctl metadata --format '{{title}}  {{artist}}')
+song_info=$(playerctl metadata --player=spotify --format '{{artist}}  {{title}}')
 
-echo "$song_info" 
+echo $song_info

@@ -61,10 +61,10 @@ if [ -n "$RANDOMPICS" ]; then
   pywalfox update || echo "pywalfox failed"
 
   # Add error handling for pywal-discord
-  if ! pywal-discord -p ~/.config/vesktop/themes -t default; then
-    echo "pywal-discord failed" >&2
-    exit 1
-  fi
+  # if ! pywal-discord -p ~/.config/vesktop/themes -t default; then
+  #   echo "pywal-discord failed" >&2
+  #   exit 1
+  # fi
 
   # Update Waybar, Cava, and other configs
   cp ~/.cache/wal/cava.colors ~/.config/cava/config

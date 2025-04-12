@@ -29,7 +29,7 @@ sh ~/.config/hypr/scripts/starshipwal/starshipwal_contrast.sh
 
 # killall hyprswitch && hyprswitch init --workspaces-per-row 4 --size-factor 4.5 --custom-css ~/.config/hyprsw/hyprsw.css &
 
-pywal-discord -p ~/.config/vesktop/themes -t default
+# pywal-discord -p ~/.config/vesktop/themes -t default
 
 # if pgrep -x "hyprswitch"; then
 #   pkill -x "hyprswitch"
