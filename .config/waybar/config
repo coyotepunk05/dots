@@ -202,8 +202,8 @@ swww img ${DIR}/${RANDOMPICS} --transition-fps 60 --transition-type any --transi
     // The code following below is given in the great documentation for Waybar status bar under Useful Utilities in Hyprland wiki
     "hyrpland/workspaces": {
     	"format": "{icon}",
-	"on-scroll-up": "hyprctl dispatch workspace e+1",
-	"on-scroll-down": "hyprctl dispatch workspace e-1",
+	"on-scroll-up": "hyprctl dispatch workspace +1",
+	"on-scroll-down": "hyprctl dispatch workspace -1",
 	"on-click": "activate"
 	}
 }
