@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-if pgrep -x "wofi" >/dev/null; then
-  pkill -x "wofi"
+if pgrep -x "sherlock" >/dev/null; then
+  pkill -x "sherlock"
 else
-  wofi &
+  sherlock &
 fi

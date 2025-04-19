@@ -85,33 +85,33 @@ color16=$best_color_value
 echo "Color16: $color16"
 
 # Backup original starship.toml in case we need to revert
-cp ~/.config/starship.toml ~/.config/starship.toml.bak
+cp ~/.config/starship.toml ~/dots/.config/starship.toml.bak
 
 # Replace ~/.config/starship.toml with the temp file content
-cp ~/.config/hypr/scripts/starshipwal/starship_temp.toml ~/.config/starship.toml
+cp ~/.config/hypr/scripts/starshipwal/starship_temp.toml ~/dots/.config/starship.toml
 
 # Replace the colors in the starship.toml file with the colors from the waybar CSS
-sed -i "s/color10/#$COLOR10/g" ~/.config/starship.toml
-sed -i "s/color11/#$COLOR11/g" ~/.config/starship.toml
-sed -i "s/color12/#$COLOR12/g" ~/.config/starship.toml
-sed -i "s/color13/#$COLOR13/g" ~/.config/starship.toml
-sed -i "s/color14/#$COLOR14/g" ~/.config/starship.toml
-sed -i "s/color15/#$COLOR15/g" ~/.config/starship.toml
-sed -i "s/color0/#$COLOR0/g" ~/.config/starship.toml
-sed -i "s/color1/#$COLOR1/g" ~/.config/starship.toml
-sed -i "s/color2/#$COLOR2/g" ~/.config/starship.toml
-sed -i "s/color3/#$COLOR3/g" ~/.config/starship.toml
-sed -i "s/color4/#$COLOR4/g" ~/.config/starship.toml
-sed -i "s/color5/#$COLOR5/g" ~/.config/starship.toml
-sed -i "s/color6/#$COLOR6/g" ~/.config/starship.toml
-sed -i "s/color7/#$COLOR7/g" ~/.config/starship.toml
-sed -i "s/color8/#$COLOR8/g" ~/.config/starship.toml
-sed -i "s/color9/#$COLOR9/g" ~/.config/starship.toml
-sed -i "s/foreground/#$FOREGROUND/g" ~/.config/starship.toml
-sed -i "s/background/#$BACKGROUND/g" ~/.config/starship.toml
-sed -i "s/cursor/#$CURSOR/g" ~/.config/starship.toml
+sed -i "s/color10/#$COLOR10/g" ~/dots/.config/starship.toml
+sed -i "s/color11/#$COLOR11/g" ~/dots/.config/starship.toml
+sed -i "s/color12/#$COLOR12/g" ~/dots/.config/starship.toml
+sed -i "s/color13/#$COLOR13/g" ~/dots/.config/starship.toml
+sed -i "s/color14/#$COLOR14/g" ~/dots/.config/starship.toml
+sed -i "s/color15/#$COLOR15/g" ~/dots/.config/starship.toml
+sed -i "s/color0/#$COLOR0/g" ~/dots/.config/starship.toml
+sed -i "s/color1/#$COLOR1/g" ~/dots/.config/starship.toml
+sed -i "s/color2/#$COLOR2/g" ~/dots/.config/starship.toml
+sed -i "s/color3/#$COLOR3/g" ~/dots/.config/starship.toml
+sed -i "s/color4/#$COLOR4/g" ~/dots/.config/starship.toml
+sed -i "s/color5/#$COLOR5/g" ~/dots/.config/starship.toml
+sed -i "s/color6/#$COLOR6/g" ~/dots/.config/starship.toml
+sed -i "s/color7/#$COLOR7/g" ~/dots/.config/starship.toml
+sed -i "s/color8/#$COLOR8/g" ~/dots/.config/starship.toml
+sed -i "s/color9/#$COLOR9/g" ~/dots/.config/starship.toml
+sed -i "s/foreground/#$FOREGROUND/g" ~/dots/.config/starship.toml
+sed -i "s/background/#$BACKGROUND/g" ~/dots/.config/starship.toml
+sed -i "s/cursor/#$CURSOR/g" ~/dots/.config/starship.toml
 
 # Add color16 to the starship.toml file
-sed -i "s/contrast/$best_color_value/g" ~/.config/starship.toml
+sed -i "s/contrast/$best_color_value/g" ~/dots/.config/starship.toml
 
 echo "Colors updated in starship.toml."

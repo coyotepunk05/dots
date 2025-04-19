@@ -1,0 +1,70 @@
+--foreground: {foreground};
+--background: {background};
+--cursor:     {cursor};
+
+--color0:  {color0};
+--color1:  {color1};
+--color2:  {color2};
+--color3:  {color3};
+--color4:  {color4};
+--color5:  {color5};
+--color6:  {color6};
+--color7:  {color7};
+--color8:  {color8};
+--color9:  {color9};
+--color10: {color10};
+--color11: {color11};
+--color12: {color12};
+--color13: {color13};
+--color14: {color14};
+--color15: {color15};
+
+/* Root settings for Sherlock Launcher */
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 16px;
+}
+
+/* Launcher Window Styling */
+window {
+    /* Note: Using fixed rgba background. To use pywal's: background-color: var(--background); */
+    background-color: rgba(0, 0, 0, 0.85); 
+    border: 2px solid;
+    /* Use var(--variable-name) syntax */
+    border-color: var(--color4); 
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* Entry / Search Box */
+#entry {
+    /* Use var(--variable-name) syntax */
+    background-color: transparent; /* Or use: background-color: var(--background); */
+    color: var(--foreground); 
+    padding: 10px;
+    border: 1px solid var(--color5); /* Use var(--variable-name) syntax */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Match / List Items */
+#match {
+    padding: 8px 10px;
+    border-radius: 4px;
+    /* Use var(--variable-name) syntax */
+    color: var(--foreground); 
+}
+
+#match:selected {
+    /* Use var(--variable-name) syntax */
+    background-color: var(--color4); 
+    color: var(--background); 
+}
+
+/* Optional: add hover effect */
+#match:hover {
+    /* Use var(--variable-name) syntax */
+    background-color: var(--color5); 
+    color: var(--background); 
+}

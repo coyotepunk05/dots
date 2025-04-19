@@ -1,0 +1,23 @@
+{
+    "kitty": {
+        "name": "Terminal",
+        "icon": "terminal"
+    },
+    "ncspot": {
+        "name": "Spotify",
+        "icon": "sherlock-spotify"
+    },
+    "VLC media player": {
+        "name": "VLC Player"
+    },
+    "Tweaks": {
+        "name": "GTK Settings",
+        "icon": "settings"
+    },
+    "Vesktop": {
+        "name": "Discord",
+        "icon": "discord",
+        "exec": "/usr/bin/vesktop --enable-features=UseOzonePlatform --ozone-platform=wayland %U",
+        "keywords": "discord"
+    }
+}

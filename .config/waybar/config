@@ -86,8 +86,8 @@
     "clock": {
         // "timezone": "America/Los_Angeles",
         "format": "{:%I:%M%p}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%m-%d-%Y}"
+        "tooltip-format": "<big>{:%Y %B %d}</big>\n<tt><small>{calendar}</small></tt>",
+        "on-click": "swaync-client -t"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -183,9 +183,6 @@ swww img ${DIR}/${RANDOMPICS} --transition-fps 60 --transition-type any --transi
 	"return-type": "json",
 	"exec": "~/.config/waybar/scripts/spotify.sh",
 	"exec-if": "pgrep spotify",
-  "on-click": "playerctl -p spotify next",
-  "on-click-right": "playerctl -p spotify previous",
-  "on-click-middle": "playerctl -p spotify play-pause",
   "on-scroll-up": "playerctl -p spotify volume 0.05+",
   "on-scroll-down": "playerctl -p spotify volume 0.05-",
 	"escape": true
