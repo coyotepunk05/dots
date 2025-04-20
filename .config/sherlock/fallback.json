@@ -143,13 +143,13 @@
     },
     {
         "name": "Web Search",
-        "display_name": "Google Search",
+        "display_name": "Search Online",
         "tag_start": "{keyword}",
         "alias": "gg",
         "type": "web_launcher",
         "args": {
-            "search_engine": "google",
-            "icon": "google"
+            "search_engine": "duckduckgo",
+            "icon": "duckduckgo"
         },
         "priority": 100
     },
