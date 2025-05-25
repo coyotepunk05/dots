@@ -75,7 +75,7 @@ View and Switch Apps:...............Alt+Tab
 All my applications (mostly for my reference):
 
 ```
-yay -S plymouth gamescope socat qbittorrent bc libreoffice cowsay gimp fcitx5-mozc fcitx5-configtool fcitx5-gtk ufw ark archlinux-xdg-menu mullvad-vin-bin nodejs-nativefier fish hyprswitch gnome-themes-extra btop wipeclean pywal-discord-git pamixer firefox neovim pacman-contrib reflector waybar python-pywal16 wofi swappy grim slurp hyprpicker wl-clipboard thunar gvfs thunar-archive-plugin file-roller stow swaync github-cli filelight mission-center lxtask p7zip wlogout phoronix-test-suite hyprlock hypridle wayland-logout xdg-desktop-portal-hyprland powertop auto-cpufreq tlp alsa-utils pavucontrol brightnessctl bluez bluez-utils blueman network-manager-applet ttf-jetbrains-mono-nerd ttf-roboto-mono noto-fonts-emoji noto-fonts noto-fonts-cjk noto-fonts-extra ttf-font-awesome python-pywalfox nwg-look swww cava jp2a w3m spicetify-cli oh-my-bash-git blesh-git starship fastfetch rose-pine-cursor rose-pine-hyprcursor vesktop spotify visual-studio-code-bin steam yazi jamesdsp obsidian kservice5 kvantum-git kvantum-qt5 dolphin hyprsunset howdy-git linux-enable-ir-emitter-5.2.4
+yay -S plymouth gamescope socat qbittorrent bc libreoffice cowsay gimp fcitx5-mozc fcitx5-configtool fcitx5-gtk ufw ark archlinux-xdg-menu mullvad-vin-bin nodejs-nativefier fish hyprswitch gnome-themes-extra btop wipeclean pywal-discord-git pamixer firefox neovim pacman-contrib reflector waybar python-pywal16 wofi swappy grim slurp hyprpicker wl-clipboard thunar gvfs thunar-archive-plugin file-roller stow swaync github-cli filelight mission-center lxtask p7zip wlogout phoronix-test-suite hyprlock hypridle wayland-logout xdg-desktop-portal-hyprland powertop auto-cpufreq tlp alsa-utils pavucontrol brightnessctl bluez bluez-utils blueman network-manager-applet ttf-jetbrains-mono-nerd ttf-roboto-mono noto-fonts-emoji noto-fonts noto-fonts-cjk noto-fonts-extra ttf-font-awesome python-pywalfox nwg-look swww cava jp2a w3m spicetify-cli oh-my-bash-git blesh-git starship fastfetch rose-pine-cursor rose-pine-hyprcursor vesktop spotify visual-studio-code-bin steam yazi jamesdsp obsidian kservice5 kvantum-git kvantum-qt5 dolphin hyprsunset howdy-git linux-enable-ir-emitter-5.2.4 linux-headers dkms xpadneo-dkms
 ```
 plugins being used:
 hyprspace
@@ -87,7 +87,7 @@ Only packages required for customization (I am worse at updating these):
 yay -S pywal-discord-git neovim waybar python-pywal16 wofi swappy grim slurp hyprpicker wl-clipboard stow swaync wlogout hyprlock hypridle wayland-logout pavucontrol brightnessctl bluez bluez-utils blueman network-manager-applet ttf-jetbrains-mono-nerd ttf-roboto-mono noto-fonts-emoji noto-fonts noto-fonts-cjk noto-fonts-extra ttf-font-awesome python-pywalfox nwg-look swww spicetify-cli blesh-git starship oh-my-bash-git fastfetch rose-pine-cursor rose-pine-hyprcursor jamesdsp
 ```
 
-I am not sure why, but jamesdsp takes a million years to install, so don't be concerned if running either of these takes 30 minutes or so on recent, modern hardware.
+Some of these programs take a while to install. Make sure that pacman is allowed to use as many cores as possible.
 
 Installing Plymouth:
 /etc/mkinitcpio.conf

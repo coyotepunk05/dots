@@ -9,8 +9,21 @@
 # p: pixel
 
 capture_region() {
+  # Start hyprpicker to freeze screen
+  hyprpicker -r -v >/dev/null &
+  picker_pid=$!
+
+  # Ensure it's cleaned up on exit
+  trap "kill $picker_pid 2>/dev/null; wait $picker_pid 2>/dev/null" EXIT
+
+  sleep 0.1 # Give time for freeze to appear
+
+  # Capture region
   region=$(slurp -b '#000000b0' -c '#00000000')
-  [[ $? -ne 0 ]] && exit 1
+  slurp_status=$?
+
+  # Exit trap will clean up picker
+  [[ $slurp_status -ne 0 ]] && exit 1
   echo "$region"
 }
 
