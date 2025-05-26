@@ -4,3 +4,5 @@ allow_images=true
 image_size=32
 width=600
 height=500
+matching=fuzzy
+single_click=true

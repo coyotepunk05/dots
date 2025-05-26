@@ -4,3 +4,6 @@ allow_images=true
 image_size=190
 width=600
 height=400
+matching=fuzzy
+sort_order=alphabetical
+single_click=true
