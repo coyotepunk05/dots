@@ -1,0 +1,13 @@
+{
+  "custom/wlogout": {
+    "icon": "",
+    "tooltip": "Log out",
+    "execute": "",
+    "executeOnAction": "",
+    "interval": 1000,
+    "hideOnEmpty": false,
+    "actions": {
+      "onLeftClick": "wlogout -b 5 -T 500 -B 500"
+    }
+  }
+}
