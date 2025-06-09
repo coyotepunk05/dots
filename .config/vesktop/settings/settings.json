@@ -145,9 +145,6 @@
         "DisableCallIdle": {
             "enabled": false
         },
-        "EmoteCloner": {
-            "enabled": true
-        },
         "Experiments": {
             "enabled": false
         },
@@ -669,6 +666,9 @@
         },
         "HideMedia": {
             "enabled": true
+        },
+        "ExpressionCloner": {
+            "enabled": true
         }
     },
     "notifications": {
@@ -681,7 +681,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1742967252542
+        "settingsSyncVersion": 1748643451419
     },
     "eagerPatches": false
 }
