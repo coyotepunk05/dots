@@ -4,7 +4,7 @@
   "wallpaper.pywal": false,
   "wallpaper.enable": false,
   "theme.bar.scaling": 75,
-  "scalingPriority": "hyprland",
+  "scalingPriority": "both",
   "theme.bar.floating": false,
   "theme.bar.buttons.borderSize": "0.1em",
   "theme.bar.buttons.enableBorders": false,
