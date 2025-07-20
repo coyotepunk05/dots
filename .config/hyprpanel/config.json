@@ -116,5 +116,9 @@
   "bar.customModules.hyprsunset.temperature": "3500k",
   "theme.osd.enable": false,
   "bar.workspaces.show_numbered": true,
-  "menus.media.displayTimeTooltip": false
+  "menus.media.displayTimeTooltip": false,
+  "bar.customModules.storage.paths": [
+    "/"
+  ],
+  "theme.bar.buttons.style": "default"
 }
