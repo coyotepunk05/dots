@@ -1,176 +1,96 @@
-/*@import "wal/colors-waybar.css";*/
-@import "colors-waybar.css";
-/*CHANGE THIS ^^ TO MAKE IT WORK FOR YOUR USERNAME*/
+@import '../../.cache/wal/colors-waybar.css';
+/* @import 'colors-waybar.css'; */
 
 * {
-	border: none;
-	border-radius: 10px;
-	font-family: "JetbrainsMono Nerd Font" ;
-	font-size: 16px;
-	min-height: 4px;
+    border: none;
+    border-radius: 0px;
+    font-family: "JetbrainsMono Nerd Font";
+    font-size: 15px;
+    min-height: 4px;
+    box-shadow: none;
 }
 
-	window#waybar {
-	background: transparent;
+window#waybar {
+    background-color: rgba(0, 0, 0, 0.5); /* solid background across whole bar */
+    color: @color4;
+    border: none;
 }
 
 window#waybar.hidden {
-	opacity: 0.2;
+    opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-    background-color: #000000;
+#window,
+#workspaces,
+#pulseaudio,
+#battery,
+#backlight,
+#clock,
+#memory,
+#cpu,
+#tray,
+#custom-power,
+#custom-wallpaper,
+#custom-spotify,
+#idle_inhibitor,
+#temperature {
+    background: transparent;
+    color: @color4;
+    margin: 0px 0px;
+    padding: 0 10px;
     border: none;
-}
-	
-
-#window {
-	margin-top: 8px;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-radius: 10px;
-	transition: none;
-        color: transparent;
-	background: transparent;
-}
-#workspaces {
-	margin-top: 8px;
-	margin-left: 8px;
-	font-size: 4px;
-	margin-bottom: 0px;
-	border-radius: 10px;
-	background: #201c1c;
-	transition: none;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
-	color: @color4;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-}
-
-#workspaces button {
-	transition: none;
-	color: @color4;
-	background: transparent;
-	font-size: 16px;
-	border-radius: 2px;
-}
-
-#workspaces button.occupied {
-	transition: none;
-	color: #FFFFFF;
-	background: transparent;
-	font-size: 4px;
+    border-radius: 0px;
+    transition: none;
+    box-shadow: none;
 }
 
 #workspaces button.active {
-	color: #FFFFFF;
-        /*border-top: 2px solid #FFFFFF;
-        border-bottom: 2px solid #FFFFFF;*/
-	/*border-radius: 3px;*/
-}
-
-#workspaces button:hover {
-
-	transition: none;
-	box-shadow: inherit;
-	text-shadow: inherit;
-	color: #FAE3B0;
-	border-color: #E8A2AF;
-	color: #E8A2AF;
-}
-
-#workspaces button.active:hover {
-    color: #E8A2AF;
-}
-
-#network:hover {
-  color: #FFFFFF;
+    color: #FFFFFF;
+    border-top: 2px solid #FFFFFF;
+    padding-bottom: 2px;
 }
 
 #network {
-	margin-top: 8px;
-	margin-left: 0px;
-	margin-right: 8px;
-	padding-left: 10px;
-	padding-right: 18px;
-	margin-bottom: 0px;
-	border-radius: 10px;
-	transition: none;
-	color: @color4;
-	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
-	color: @color4;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
+    background: transparent;
+    color: @color4;
+    margin: 0px 4px;
+    margin-right: 20px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 0px;
+    transition: none;
+    box-shadow: none;
 }
 
-#pulseaudio:hover {
-  color: #FFFFFF;
+#custom-launcher {
+    background: transparent;
+    color: @color4;
+    margin: 0px 0px;
+    margin-left: 14px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 0px;
+    transition: none;
+    box-shadow: none;
 }
 
-#pulseaudio {
-	margin-top: 8px;
-	margin-left: 8px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 10px;
-	transition: none;
-	color: @color4;
-	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
-	color: @color4;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
+/* Optional hover effect */
+#workspaces button:hover,
+#network:hover,
+#pulseaudio:hover,
+#battery:hover,
+#backlight:hover,
+#clock:hover,
+#memory:hover,
+#cpu:hover,
+#custom-launcher:hover,
+#custom-spotify:hover,
+#idle_inhibitor:hover,
+#temperature:hover {
+    color: #FFFFFF;
 }
 
-#battery:hover, #battery.charging:hover, #battery.plugged:hover {
-  color: #FFFFFF;
-}
-
-#battery {
-	margin-top: 8px;
-  margin-right: 8px;
-	margin-left: 8px;
-	padding-left: 10px;
-	padding-right: 16px;
-	margin-bottom: 0px;
-	border-radius: 10px;
-	transition: none;
-	color: @color4;
-	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
-	color: @color4;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
-}
-
-#battery.charging, #battery.plugged {
-	color: @color4;
-    	background-color: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
-	color: @color4;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
-}
-
+/* Battery critical blink still works */
 #battery.critical:not(.charging) {
     background-color: #E3242B;
     color: #FFFFFF;
@@ -186,227 +106,4 @@ window#waybar.chromium {
         background-color: #BF616A;
         color: #B5E8E0;
     }
-}
-
-#backlight:hover {
-  color: #FFFFFF;
-}
-
-#backlight {
-	margin-top: 8px;
-	margin-left: 8px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 10px;
-	transition: none;
-	color: @color4;
-	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
-	color: @color4;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
-}
-
-#clock:hover {
-  color: #FFFFFF;
-}
-
-#clock {
-	margin-top: 8px;
-	margin-left: 8px;
-  margin-right: 8px;
-	margin-bottom: 0px;
-	border-radius: 10px;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
-	color: @color4;
-	padding: 4px 10px;
-	border: 2.5px solid transparent;
-	background-clip: padding-box, border-box;
-}
-
-#memory:hover {
-  color: #FFFFFF;
-}
-
-#memory {
-	margin-top: 8px;
-	margin-left: 8px;
-	padding-left: 10px;
-	margin-bottom: 0px;
-	padding-right: 12px;
-	border-radius: 10px;
-	transition: none;
-	color: @color4;
-	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
-	color: @color4;
-	border: 2.5px solid transparent;
-  background-clip: padding-box, border-box;
-}
-
-
-#cpu:hover {
-  color: #FFFFFF;
-}
-
-#cpu {
-	margin-top: 8px;
-	margin-left: 8px;
-	padding-left: 10px;
-	margin-bottom: 0px;
-	padding-right: 14px;
-	border-radius: 10px;
-	transition: none;
-	color: @color4;
-	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
-	color: @color4;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
-}
-
-#tray {
-	margin-top: 8px;
-	margin-left: 8px;
-	padding-left: 10px;
-	margin-bottom: 0px;
-	padding-right: 10px;
-	border-radius: 10px;
-	transition: none;
-	color: #B5E8E0;
-	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
-	color: @color4;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
-}
-
-#custom-launcher {
-	margin-top: 8px;
-	margin-left: 8px;
-	padding-left: 10px;
-	padding-right: 5px;
-	margin-bottom: 0px;
-	border-radius: 10px;
-	transition: none;
-	color: @color4;
-	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
-	color: @color4;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-}
-
-#custom-launcher:hover {
-  color: #FFFFFF;
-}
-
-#custom-power {
-	font-size: 20px;
-	margin-top: 8px;
-	margin-left: 8px;
-	margin-right: 8px;
-	padding-left: 10px;
-	padding-right: 5px;
-	margin-bottom: 0px;
-	border-radius: 10px;
-	transition: none;
-	color: @color4;
-	background: #F28FAD;
-}
-
-#custom-wallpaper {
-	margin-top: 8px;
-	margin-left: 8px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 10px;
-	transition: none;
-	color: @color4;
-	background: #201c1c;
-}
-
-#custom-spotify:hover {
-  color: #FFFFFF;
-}
-
-#custom-spotify {
-	margin-top: 8px;
-	margin-left: 8px;
-	padding-left: 10px;
-	padding-right: 15px;
-	margin-bottom: 0px;
-	border-radius: 10px;
-	transition: none;
-	color: @color4;
-	background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
-	color: @color4;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
-}
-
-#idle_inhibitor.deactivated {
-	margin-top: 8px;
-        margin-left: 8px;
-        padding-left: 10px;
-        padding-right: 18px;
-        margin-bottom: 0px;
-        border-radius: 10px;
-        transition: none;
-        color: @color4;
-        background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
-	color: @color4;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
-}
-
-#idle_inhibitor.activated {
-	margin-top: 8px;
-        margin-left: 8px;
-        padding-left: 10px;
-        padding-right: 18px;
-        margin-bottom: 0px;
-        border-radius: 10px;
-        transition: none;
-        color: @color40;
-        background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
-	color: #FFFFFF;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
-}
-
-#idle_inhibitor:hover {
-  color: #FFFFFF;
-}
-
-#temperature:hover {
-  color: #FFFFFF;
-}
-
-#temperature {
-	 margin-top: 8px;
-        margin-left: 8px;
-        padding-left: 10px;
-        padding-right: 14px;
-        margin-bottom: 0px;
-        border-radius: 10px;
-        transition: none;
-        color: @color4;
-        background: #201c1c;
-	background: linear-gradient(#201c1c, #201c1c) padding-box, linear-gradient(30deg, @color1, @color3) border-box;
-	color: @color4;
-	border: 2.5px solid transparent;
-    	background-clip: padding-box, border-box;
-
 }

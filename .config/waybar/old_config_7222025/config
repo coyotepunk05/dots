@@ -85,10 +85,9 @@
     },
     "clock": {
         // "timezone": "America/Los_Angeles",
-        "format": "{:%I:%M:%S%p}",
+        "format": "{:%I:%M%p}",
         "tooltip-format": "<big>{:%Y %B %d}</big>\n<tt><small>{calendar}</small></tt>",
-        "on-click": "swaync-client -t",
-        "interval": 1
+        "on-click": "swaync-client -t"
     },
     "cpu": {
         "format": "{usage}% ",

@@ -14,7 +14,7 @@
   "theme.bar.margin_sides": "1em",
   "menus.power.lowBatteryNotification": true,
   "menus.power.lowBatteryThreshold": 10,
-  "theme.bar.menus.menu.media.scaling": 70,
+  "theme.bar.menus.menu.media.scaling": 75,
   "theme.bar.menus.menu.notifications.scaling": 80,
   "theme.bar.transparent": false,
   "theme.bar.buttons.monochrome": false,
@@ -120,5 +120,17 @@
   "bar.customModules.storage.paths": [
     "/"
   ],
-  "theme.bar.buttons.style": "default"
+  "theme.bar.buttons.style": "default",
+  "theme.notification.scaling": 85,
+  "theme.osd.scaling": 75,
+  "theme.bar.menus.menu.dashboard.scaling": 85,
+  "theme.bar.menus.menu.dashboard.confirmation_scaling": 85,
+  "theme.bar.menus.menu.volume.scaling": 85,
+  "theme.bar.menus.menu.network.scaling": 85,
+  "theme.bar.menus.menu.bluetooth.scaling": 85,
+  "theme.bar.menus.menu.battery.scaling": 85,
+  "theme.bar.menus.menu.clock.scaling": 85,
+  "theme.tooltip.scaling": 75,
+  "theme.bar.menus.popover.scaling": 75,
+  "theme.bar.menus.opacity": 85
 }

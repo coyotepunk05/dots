@@ -27,6 +27,11 @@
   "hide-on-clear": true,
   "hide-on-action": true,
   "script-fail-notify": true,
+  "blacklist": [
+    "spotify",
+    "mpv",
+    "vlc"
+  ],
   "widgets": [
     "dnd",
     "title",

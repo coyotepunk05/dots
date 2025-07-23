@@ -1,4 +1,5 @@
-@import "colors-waybar.css";
+/* @import "colors-waybar.css"; */
+@import '../../.cache/wal/colors-waybar.css';
 
 .client-image {
     margin: 15px;

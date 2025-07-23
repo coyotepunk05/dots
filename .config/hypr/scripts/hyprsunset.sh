@@ -1,9 +1,10 @@
 #!/bin/bash
 
 # Toggle hyprsunset with temperature 4000 or kill it if running
-if pkill -x "hyprsunset"; then
-  echo "Hyprsunset terminated"
+if [ "$(hyprctl hyprsunset temperature)" = "6500" ]; then
+  hyprctl hyprsunset temperature 3000
+  echo "3000"
 else
-  hyprsunset -t 4000 &
-  echo "Hyprsunset activated (4000K)"
+  hyprctl hyprsunset temperature 6500
+  echo "6500"
 fi
