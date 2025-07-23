@@ -12,8 +12,10 @@ swww img $wallpaper --transition-fps 60 --transition-type grow --transition-pos 
 
 pywalfox update
 
-# cp ~/.cache/wal/cava.colors ~/.config/cava/config && cp ~/.cache/wal/colors-waybar.css ~/.config/waybar/colors-waybar.css && cp ~/.cache/wal/colors-waybar.css ~/.config/wlogout/colors-waybar.css && cp ~/.cache/wal/colors-waybar.css ~/.config/hyprsw/colors-waybar.css && cp ~/.cache/wal/colors-waybar.css ~/.config/sherlock/colors-waybar.css
+cp ~/.cache/wal/colors-waybar.css ~/.config/waybar/colors-waybar.css
+
+swaync-client -rs
 
 sh ~/.config/hypr/scripts/starshipwal/starshipwal_contrast.sh
 
-touch ~/.config/waybar/style.css
+# touch ~/.config/waybar/style.css

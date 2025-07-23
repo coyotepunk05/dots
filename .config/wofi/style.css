@@ -9,7 +9,7 @@ window{
   all:unset;
 	font-size: 20px;
 	font-family: "Roboto Mono Medium";
-	/* background-color: rgba(50, 50, 50, 0.9); */
+	background-color: rgba(50, 50, 50, 0.9);
 	border-radius: 7px;
 	border-bottom: 3px solid orange;
 	background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.89)) padding-box, linear-gradient(30deg, @color4, @color5) border-box;
@@ -36,9 +36,9 @@ window{
   background-clip: padding-box, border-box;
 }
 
-/*#text: selected {*/
-/*	color: #333333;*/
-/*}*/
+#text: selected {
+	color: #333333;
+}
 
 #input{
 	background-color: rgba(50, 50, 50, 0);

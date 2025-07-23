@@ -1,11 +1,11 @@
-@import '../../.cache/wal/colors-waybar.css';
-/* @import 'colors-waybar.css'; */
+/* @import '../../.cache/wal/colors-waybar.css'; */
+@import 'colors-waybar.css';
 
 * {
     border: none;
     border-radius: 0px;
-    font-family: "JetbrainsMono Nerd Font";
-    font-size: 15px;
+    font-family: "JetBrains Mono";
+    font-size: 14px;
     min-height: 4px;
     box-shadow: none;
 }
@@ -46,8 +46,9 @@ window#waybar.hidden {
 
 #workspaces button.active {
     color: #FFFFFF;
-    border-top: 2px solid #FFFFFF;
-    padding-bottom: 2px;
+    border-bottom: 2px solid #FFFFFF;
+    padding-bottom: 0px;
+    margin: 4px;
 }
 
 #network {
@@ -92,8 +93,8 @@ window#waybar.hidden {
 
 /* Battery critical blink still works */
 #battery.critical:not(.charging) {
-    background-color: #E3242B;
-    color: #FFFFFF;
+    background-color: transparent;
+    color: #E3242B;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -106,4 +107,9 @@ window#waybar.hidden {
         background-color: #BF616A;
         color: #B5E8E0;
     }
+}
+
+#workspaces button {
+    margin: 4px 4px; /* Adjust this value to control spacing */
+    padding: 1px 5px; /* Adjust this value to control spacing */
 }
