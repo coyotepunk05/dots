@@ -1,4 +1,5 @@
 #!/bin/bash
+# If you think this is messy or you could do better, you're probably right. If you do, you should send it to me. Thanks :)
 
 # Function to convert hex color to RGB
 hex_to_rgb() {
