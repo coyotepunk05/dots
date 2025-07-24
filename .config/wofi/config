@@ -1,4 +1,12 @@
+term=kitty
+location=center
 mode=drun
+prompt= Search | 検索 
+show_all=true
+gtk_dark=false
+insensitive=false
+allow_markup=true
+line_wrap=word
 no_actions=true
 allow_images=true
 image_size=32

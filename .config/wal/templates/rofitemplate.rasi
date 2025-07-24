@@ -1,38 +1,38 @@
 * {{
     active-background: {color2};
-    active-foreground: @foreground;
-    normal-background: @background;
-    normal-foreground: @foreground;
+    active-foreground: {foreground};
+    normal-background: {background};
+    normal-foreground: {foreground};
     urgent-background: {color1};
-    urgent-foreground: @foreground;
+    urgent-foreground: {foreground};
 
-    alternate-active-background: @background;
-    alternate-active-foreground: @foreground;
-    alternate-normal-background: @background;
-    alternate-normal-foreground: @foreground;
-    alternate-urgent-background: @background;
-    alternate-urgent-foreground: @foreground;
+    alternate-active-background: {background};
+    alternate-active-foreground: {foreground};
+    alternate-normal-background: {background};
+    alternate-normal-foreground: {foreground};
+    alternate-urgent-background: {background};
+    alternate-urgent-foreground: {foreground};
 
     selected-active-background: {color1};
-    selected-active-foreground: @foreground;
+    selected-active-foreground: {foreground};
     selected-normal-background: {color2};
-    selected-normal-foreground: @foreground;
+    selected-normal-foreground: {foreground};
     selected-urgent-background: {color3};
-    selected-urgent-foreground: @foreground;
+    selected-urgent-foreground: {foreground};
 
-    background-color: @background;
+    background-color: {background};
     background: {background};
-    background-alt: @background;
+    background-alt: {background};
     foreground: {foreground};
-    border-color: @background;
+    border-color: {background};
     active: {color2};
     selected: {color1};
-    urgent: @foreground;
+    urgent: {foreground};
     spacing: 2;
 }}
 
 #window {{
-    background-color: @background;
+    background-color: {background};
     border: 0;
     padding: 2.5ch;
 }}
@@ -44,12 +44,12 @@
 
 #message {{
     border: 2px 0px 0px;
-    border-color: @border-color;
+    border-color: {color4};
     padding: 1px;
 }}
 
 #textbox {{
-    text-color: @foreground;
+    text-color: {foreground};
 }}
 
 #inputbar {{
@@ -66,7 +66,7 @@
 #listview {{
     fixed-height: 0;
     border: 2px 0px 0px;
-    border-color: @border-color;
+    border-color: {color4};
     spacing: 2px;
     scrollbar: true;
     padding: 2px 0px 0px;
@@ -136,7 +136,7 @@
 
 #sidebar {{
     border: 2px 0px 0px;
-    border-color: @border-color;
+    border-color: {color4};
 }}
 
 #button {{

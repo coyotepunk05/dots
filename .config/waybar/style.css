@@ -91,6 +91,10 @@ window#waybar.hidden {
     color: #FFFFFF;
 }
 
+#idle_inhibitor.activated {
+  color: #FFFFFF;
+}
+
 /* Battery critical blink still works */
 #battery.critical:not(.charging) {
     background-color: transparent;

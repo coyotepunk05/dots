@@ -1,12 +1,5 @@
 @import ".cache/wal/colors-waybar.css";
 
-/* * { */
-/*   font-family: Maple Mono; */
-/*   background: transparent; */
-/*   color: #d8cab8; */
-/* } */
-
-
 * {
 	border-radius: 3px;
 	border: none;
@@ -23,6 +16,7 @@ window{
 	color: @color13;
 	border: 3.5px solid transparent;
   background-clip: padding-box, border-box;
+  opacity: 0.8;
 }
 
 #entry{
@@ -30,7 +24,6 @@ window{
 	border-radius: 17px;
   margin-right: 2em;
   margin-left: 2em;
-  placeholder: "Search";
 }
 
 #entry:selected {
@@ -43,9 +36,9 @@ window{
   background-clip: padding-box, border-box;
 }
 
-/* #text: selected { */
-/* 	color: #333333; */
-/* } */
+#text: selected {
+	color: #333333;
+}
 
 #input{
 	background-color: rgba(50, 50, 50, 0);
