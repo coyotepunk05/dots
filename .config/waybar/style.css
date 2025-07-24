@@ -61,6 +61,7 @@ window#waybar.hidden {
     border-radius: 0px;
     transition: none;
     box-shadow: none;
+    margin-left: -6px;
 }
 
 #custom-launcher {
