@@ -93,11 +93,11 @@
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false,
-        "on-click": "sh ~/.config/hypr/scripts/lxtask.sh"
+        "on-click": "killall missioncenter || GTK_THEME=Adwaita:dark missioncenter"
     },
     "memory": {
         "format": "{}% ",
-        "on-click": "sh ~/.config/hypr/scripts/lxtask.sh"
+        "on-click": "killall missioncenter || GTK_THEME=Adwaita:dark missioncenter"
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -177,7 +177,7 @@ swww img ${DIR}/${RANDOMPICS} --transition-fps 60 --transition-type any --transi
             "car": "",
             "default": [" ", " ", " "]
         },
-        "on-click": "sh ~/.config/hypr/scripts/pavucontrol.sh"
+        "on-click": "killall pavucontrol || pavucontrol"
    },
     "custom/spotify": {
     	"interval": 1,
@@ -190,7 +190,7 @@ swww img ${DIR}/${RANDOMPICS} --transition-fps 60 --transition-type any --transi
     },
     "custom/launcher":{
         "format": " ",
-        "on-click": "sh ~/.config/hypr/scripts/launcher.sh",
+        "on-click": "killall rofi || rofi -modi 'calc,drun' -show drun",
         "on-click-right": "wlogout -b 5 -T 500 -B 500"
     },
     "custom/power":{
