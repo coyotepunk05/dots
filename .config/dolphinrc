@@ -19,5 +19,8 @@ MenuBar=Disabled
 [PreviewSettings]
 Plugins=opendocumentthumbnail,imagethumbnail,cursorthumbnail,windowsexethumbnail,comicbookthumbnail,windowsimagethumbnail,ebookthumbnail,djvuthumbnail,audiothumbnail,jpegthumbnail,appimagethumbnail,svgthumbnail,exrthumbnail,kraorathumbnail,directorythumbnail,gdk-pixbuf-thumbnailer,jxl
 
+[Search]
+Location=Everywhere
+
 [UiSettings]
 ColorScheme=KvGnomeDark
