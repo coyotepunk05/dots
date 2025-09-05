@@ -14,6 +14,8 @@ application/x-extension-xht=firefox.desktop;
 [Default Applications]
 text/plain=kitty-2.desktop;
 text/css=kitty-2.desktop;
+text/py=nvim
+application/json=code
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 x-scheme-handler/chrome=firefox.desktop

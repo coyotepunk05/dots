@@ -1,5 +1,8 @@
 MenuBar=Disabled
 
+[DetailsMode]
+PreviewSize=32
+
 [ExtractDialog]
 3 screens: Window-Maximized=true
 DirHistory[$e]=$HOME/Downloads/photos_takeout/,$HOME/Downloads/photo_takeout/
@@ -18,9 +21,6 @@ MenuBar=Disabled
 
 [PreviewSettings]
 Plugins=opendocumentthumbnail,imagethumbnail,cursorthumbnail,windowsexethumbnail,comicbookthumbnail,windowsimagethumbnail,ebookthumbnail,djvuthumbnail,audiothumbnail,jpegthumbnail,appimagethumbnail,svgthumbnail,exrthumbnail,kraorathumbnail,directorythumbnail,gdk-pixbuf-thumbnailer,jxl
-
-[Search]
-Location=Everywhere
 
 [UiSettings]
 ColorScheme=KvGnomeDark
