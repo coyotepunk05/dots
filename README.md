@@ -1,5 +1,5 @@
 
-![2024-12-02_18-21-47](https://github.com/user-attachments/assets/f23dc60a-cd08-4ec3-87f4-ded62490a13e)
+<img width="2560" height="1600" alt="2025-09-10_18-59-31" src="https://github.com/user-attachments/assets/f076a4da-6d6f-4f57-a0b5-a8ba725b6887" />
 
 <br />
 <br />
@@ -17,7 +17,9 @@ Integrated with many common applications
 ```
 
 
-https://github.com/user-attachments/assets/c6d34459-28b6-4e13-9cfa-31e37ea4eb71
+
+https://github.com/user-attachments/assets/6c9ba37b-770d-4183-be74-4509d314f9fd
+
 
 
 
@@ -36,7 +38,9 @@ https://github.com/user-attachments/assets/c6d34459-28b6-4e13-9cfa-31e37ea4eb71
 Usable setup with dropdown menus for audio EQ, audio output, internet, system metrics, and bluetooth.
 ```
 
-https://github.com/user-attachments/assets/c1081157-243f-4c1a-96a8-88749bc675c7
+
+https://github.com/user-attachments/assets/cb5030f0-9fbe-434e-befb-2993de1615bc
+
 
 
 <br />
