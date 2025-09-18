@@ -17,4 +17,5 @@ swaync-client -rs
 
 sh ~/.config/hypr/scripts/starshipwal/starshipwal_contrast.sh
 
+pywal-discord
 # touch ~/.config/waybar/style.css

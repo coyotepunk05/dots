@@ -5,7 +5,8 @@
     "useQuickCss": true,
     "themeLinks": [],
     "enabledThemes": [
-        "pywal-vencord3.theme.css"
+        "pywal-vencord3.theme.css",
+        "colors-discord-3.css"
     ],
     "enableReactDevtools": false,
     "frameless": false,
@@ -221,7 +222,8 @@
         "MemberCount": {
             "enabled": true,
             "memberList": true,
-            "toolTip": true
+            "toolTip": true,
+            "voiceActivity": true
         },
         "MessageClickActions": {
             "enabled": false
@@ -669,6 +671,12 @@
         },
         "ExpressionCloner": {
             "enabled": true
+        },
+        "CopyStickerLinks": {
+            "enabled": false
+        },
+        "ImageFilename": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -681,7 +689,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1748643451419
+        "settingsSyncVersion": 1757555893792
     },
     "eagerPatches": false
 }

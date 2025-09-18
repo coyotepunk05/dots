@@ -1,13 +1,13 @@
 format = """
-[](#70A5B4)\
+[](#2C5D4C)\
 $os\
 $username\
-[](bg:#79C8C0 fg:#70A5B4)\
+[](bg:#4F6B4E fg:#2C5D4C)\
 $directory\
-[](fg:#79C8C0 bg:#A69FA4)\
+[](fg:#4F6B4E bg:#5F8B39)\
 $git_branch\
 $git_status\
-[](fg:#A69FA4 bg:#D3B39A)\
+[](fg:#5F8B39 bg:#37935D)\
 $c\
 $elixir\
 $elm\
@@ -20,11 +20,11 @@ $nodejs\
 $nim\
 $rust\
 $scala\
-[](fg:#D3B39A bg:#AAD2BB)\
+[](fg:#37935D bg:#5D9A50)\
 $docker_context\
-[](fg:#AAD2BB bg:#DCC59A)\
+[](fg:#5D9A50 bg:#9DAD55)\
 $time\
-[ ](fg:#DCC59A)\
+[ ](fg:#9DAD55)\
 """
 
 # Disable the blank line at the start of the prompt
@@ -34,20 +34,20 @@ $time\
 # and use the os module below
 [username]
 show_always = true
-style_user = "bg:#70A5B4"
-style_root = "bg:#70A5B4"
-format = '[$user ](fg:#000000 $style)'
+style_user = "bg:#2C5D4C"
+style_root = "bg:#2C5D4C"
+format = '[$user ](fg:#FFFFFF $style)'
 disabled = false
 
 # An alternative to the username module which displays a symbol that
 # represents the current operating system
 [os]
-style = "bg:#70A5B4"
+style = "bg:#2C5D4C"
 disabled = true # Disabled by default
 
 [directory]
-style = "bg:#79C8C0"
-format = "[ $path ](fg:#000000 $style)"
+style = "bg:#4F6B4E"
+format = "[ $path ](fg:#FFFFFF $style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
@@ -66,79 +66,79 @@ truncation_symbol = "…/"
 
 [c]
 symbol = " "
-style = "bg:#D3B39A"
-format = '[ $symbol ($version) ](fg:#000000 $style)'
+style = "bg:#37935D"
+format = '[ $symbol ($version) ](fg:#FFFFFF $style)'
 
 [docker_context]
 symbol = " "
-style = "bg:#AAD2BB"
-format = '[ $symbol $context ](fg:#000000 $style)'
+style = "bg:#5D9A50"
+format = '[ $symbol $context ](fg:#FFFFFF $style)'
 
 [elixir]
 symbol = " "
-style = "bg:#D3B39A"
-format = '[ $symbol ($version) ](fg: #000000$style)'
+style = "bg:#37935D"
+format = '[ $symbol ($version) ](fg: #FFFFFF$style)'
 
 [elm]
 symbol = " "
-style = "bg:#D3B39A"
-format = '[ $symbol ($version) ](fg:#000000 $style)'
+style = "bg:#37935D"
+format = '[ $symbol ($version) ](fg:#FFFFFF $style)'
 
 [git_branch]
 symbol = ""
-style = "bg:#A69FA4"
-format = '[ $symbol $branch ](fg:#000000 $style)'
+style = "bg:#5F8B39"
+format = '[ $symbol $branch ](fg:#FFFFFF $style)'
 
 [git_status]
-style = "bg:#A69FA4"
-format = '[$all_status$ahead_behind ](fg:#000000 $style)'
+style = "bg:#5F8B39"
+format = '[$all_status$ahead_behind ](fg:#FFFFFF $style)'
 
 [golang]
 symbol = " "
-style = "bg:#D3B39A"
-format = '[ $symbol ($version) ](fg:#000000 $style)'
+style = "bg:#37935D"
+format = '[ $symbol ($version) ](fg:#FFFFFF $style)'
 
 [gradle]
-style = "bg:#D3B39A"
-format = '[ $symbol ($version) ](fg:#000000 $style)'
+style = "bg:#37935D"
+format = '[ $symbol ($version) ](fg:#FFFFFF $style)'
 
 [haskell]
 symbol = " "
-style = "bg:#D3B39A"
-format = '[ $symbol ($version) ](fg:#000000 $style)'
+style = "bg:#37935D"
+format = '[ $symbol ($version) ](fg:#FFFFFF $style)'
 
 [java]
 symbol = " "
-style = "bg:#D3B39A"
-format = '[ $symbol ($version) ](fg:#000000 $style)'
+style = "bg:#37935D"
+format = '[ $symbol ($version) ](fg:#FFFFFF $style)'
 
 [julia]
 symbol = " "
-style = "bg:#D3B39A"
-format = '[ $symbol ($version) ](fg:#000000 $style)'
+style = "bg:#37935D"
+format = '[ $symbol ($version) ](fg:#FFFFFF $style)'
 
 [nodejs]
 symbol = ""
-style = "bg:#D3B39A"
-format = '[ $symbol ($version) ](fg:#000000 $style)'
+style = "bg:#37935D"
+format = '[ $symbol ($version) ](fg:#FFFFFF $style)'
 
 [nim]
 symbol = "󰆥 "
-style = "bg:#D3B39A"
-format = '[ $symbol ($version) ](fg:#000000 $style)'
+style = "bg:#37935D"
+format = '[ $symbol ($version) ](fg:#FFFFFF $style)'
 
 [rust]
 symbol = ""
-style = "bg:#D3B39A"
-format = '[ $symbol ($version) ](fg:#000000 $style)'
+style = "bg:#37935D"
+format = '[ $symbol ($version) ](fg:#FFFFFF $style)'
 
 [scala]
 symbol = " "
-style = "bg:#D3B39A"
-format = '[ $symbol ($version) ](fg:#000000 $style)'
+style = "bg:#37935D"
+format = '[ $symbol ($version) ](fg:#FFFFFF $style)'
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#DCC59A"
-format = '[ 󰋑 $time ](fg:#000000 $style)'
+style = "bg:#9DAD55"
+format = '[ 󰋑 $time ](fg:#FFFFFF $style)'
