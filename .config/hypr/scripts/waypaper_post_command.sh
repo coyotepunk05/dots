@@ -18,4 +18,6 @@ swaync-client -rs
 sh ~/.config/hypr/scripts/starshipwal/starshipwal_contrast.sh
 
 pywal-discord
+
+fcitx5-remote -e && fcitx5
 # touch ~/.config/waybar/style.css
