@@ -3,9 +3,10 @@
     "discordBranch": "stable",
     "arRPC": "on",
     "splashColor": "rgb(239, 239, 240)",
-    "splashBackground": "rgba(21, 33, 50, 0.314)",
+    "splashBackground": "rgba(14, 32, 21, 0.314)",
     "spellCheckLanguages": [
         "en-US",
         "en"
-    ]
+    ],
+    "enableSplashScreen": false
 }
