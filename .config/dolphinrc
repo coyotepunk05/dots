@@ -1,7 +1,7 @@
 MenuBar=Disabled
 
 [DetailsMode]
-PreviewSize=32
+PreviewSize=80
 
 [ExtractDialog]
 3 screens: Window-Maximized=true
