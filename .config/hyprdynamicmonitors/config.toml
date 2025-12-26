@@ -1,0 +1,52 @@
+[general]
+destination = "$HOME/.config/hypr/monitors.conf"
+
+[power_events]
+
+[power_events.dbus_query_object]
+path = "/org/freedesktop/UPower/devices/line_power_ACAD"
+
+[[power_events.dbus_signal_match_rules]]
+object_path = "/org/freedesktop/UPower/devices/line_power_ACAD"
+
+
+[profiles.Desktop_Left_Monitor]
+config_file = "/home/cody/.config/hyprdynamicmonitors/hyprconfigs/Desktop_Left_Monitor.go.tmpl"
+config_file_type = "template"
+[profiles.Desktop_Left_Monitor.conditions]
+
+[[profiles.Desktop_Left_Monitor.conditions.required_monitors]]
+description = "AU Optronics 0x7AA7"
+monitor_tag = "monitor0"
+
+[[profiles.Desktop_Left_Monitor.conditions.required_monitors]]
+description = "Lenovo Group Limited L24q-20 U5P0NKC9"
+monitor_tag = "monitor1"
+
+
+[profiles.Laptop_Alone]
+config_file = "/home/cody/.config/hyprdynamicmonitors/hyprconfigs/Laptop_Alone.go.tmpl"
+config_file_type = "template"
+[profiles.Laptop_Alone.conditions]
+
+[[profiles.Laptop_Alone.conditions.required_monitors]]
+description = "AU Optronics 0x7AA7"
+monitor_tag = "monitor0"
+
+
+[profiles.Ridgeway_Dr_2x1080p]
+config_file = "/home/cody/.config/hyprdynamicmonitors/hyprconfigs/Ridgeway_Dr_2x1080p.go.tmpl"
+config_file_type = "template"
+[profiles.Ridgeway_Dr_2x1080p.conditions]
+
+[[profiles.Ridgeway_Dr_2x1080p.conditions.required_monitors]]
+description = "AU Optronics 0x7AA7"
+monitor_tag = "monitor0"
+
+[[profiles.Ridgeway_Dr_2x1080p.conditions.required_monitors]]
+description = "HP Inc. HP 527sh 3CM428185Z"
+monitor_tag = "monitor1"
+
+[[profiles.Ridgeway_Dr_2x1080p.conditions.required_monitors]]
+description = "HP Inc. HP 527sh 3CM4390WJP"
+monitor_tag = "monitor2"

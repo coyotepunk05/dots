@@ -1,0 +1,29 @@
+configuration {
+    modes: "drun,calc";
+    font: "Maple Mono 12";
+    location: 0;
+    fixed-num-lines: true;
+    show-icons: true;
+    terminal: "kitty";
+    sorting-method: "fzf";
+    display-drun: " ";
+    kb-mode-next: "Tab";
+    kb-element-next: "";
+
+    timeout {
+        action: "kb-cancel";
+        delay:  0;
+    }
+
+    filebrowser {
+        directories-first: true;
+        sorting-method:    "name";
+    }
+    calc {
+        hint-result: "Result: ";
+        hint-welcome: "Result:";
+      }
+}
+
+@theme "/dev/null"
+@import "~/.config/rofi/theme.rasi"

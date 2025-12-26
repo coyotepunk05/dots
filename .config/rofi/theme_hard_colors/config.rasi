@@ -1,0 +1,23 @@
+configuration {
+    modes: "drun";
+    font: "Maple Mono 12";
+    location: 0;
+    fixed-num-lines: true;
+    show-icons: true;
+    terminal: "kitty";
+    sorting-method: "fzf";
+    display-drun: " ";
+
+    timeout {
+        action: "kb-cancel";
+        delay:  0;
+    }
+
+    filebrowser {
+        directories-first: true;
+        sorting-method:    "name";
+    }
+}
+
+@theme "/dev/null"
+@import "~/.config/rofi/theme.rasi"

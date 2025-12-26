@@ -1,0 +1,91 @@
+@import "~/.cache/wal/rofitemplate2.rasi"
+
+* {
+  font: "Maple Mono";
+  // text-color: @color4;
+  text-color: @color5;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+window {
+  width: 600px;
+  height: 500px;
+  background-color: transparent;
+  border: 1px;
+  border-radius: 5px;
+  border-color: @color4;
+  background-color: #14121678;
+  transparency: "real";
+  opacity: 0.5;
+}
+
+mainbox {
+  padding: 0px;
+  children: [inputbar, inputborder, message, listview];
+}
+
+message {
+    margin: 0px 0px 0px 20px;
+    
+  }
+
+inputborder {
+  text: "";
+  background-color: @color4;
+  height: 1px;
+  expand: false;
+  margin: 10px 0px 10px 0px;
+  border: 1px 0 0 0;
+  border-color: @color4;
+}
+
+scrollbar {
+  border-top: 1px;
+  border-color: @color4;
+}
+
+inputbar {
+  children: [prompt, entry];
+  background-color: #14121600;
+  border: 0px 0px 1px 0px;
+  border-radius: 8px 8px 0px 0px;
+  border-color: @color4;
+  padding: 12px 12px 12px 12px;
+  margin: 0px 8px 0 8px;
+}
+
+entry {
+    margin: 8px;
+    blink: true;
+    placeholder: "   Search";
+  }
+
+prompt {
+  enabled: false;
+}
+
+listview {
+  padding: 12px 0 0 0;
+  spacing: 8px;
+}
+
+element {
+  padding: 6px;
+  margin: 0 12px;
+  border-radius: 12px;
+  text-color: @color5;
+  background-color: transparent;
+}
+
+element selected {
+  background-color: #27232b;
+  text-color: @color5;
+  font-weight: bold;
+}
+
+element-icon {
+  padding: 4px;
+  margin: 0 6px 0 0;
+}
