@@ -61,7 +61,7 @@ window#waybar.hidden {
     background: transparent;
     color: @color4;
     margin: 0px 4px;
-    margin-right: 20px;
+    margin-right: 4px;
     padding: 0 10px;
     border: none;
     border-radius: 0px;
@@ -80,6 +80,19 @@ window#waybar.hidden {
     border-radius: 0px;
     transition: none;
     box-shadow: none;
+}
+
+#custom-notification {
+    background: transparent;
+    color: @color4;
+    margin: 0px 4px;
+    margin-right: 10px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 0px;
+    transition: none;
+    box-shadow: none;
+    margin-left: -6px;
 }
 
 /* Optional hover effect */

@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["custom/launcher", "hyprland/workspaces", "tray", "custom/spotify"],
     "modules-center": ["clock"],
-    "modules-right": ["idle_inhibitor", "backlight",  "pulseaudio", "cpu", "memory", "keyboard-state", "sway/language", "battery", "network"],
+    "modules-right": ["idle_inhibitor", "backlight",  "pulseaudio", "cpu", "memory", "keyboard-state", "sway/language", "battery", "network", "custom/notification"],
     // Modules configuration
      "hyprland/workspaces": {
          "disable-scroll": false,
@@ -169,5 +169,25 @@
     "custom/power":{
         "format": " ",
         "on-click": "bash ~/.config/rofi/leave/leave.sh",
+    },
+    "custom/notification": {
+      "tooltip": false,
+      "format": "{} {icon}",
+      "format-icons": {
+        "notification": "󱅫",
+        "none": "",
+        "dnd-notification": " ",
+        "dnd-none": "󰂛",
+        "inhibited-notification": " ",
+        "inhibited-none": "",
+        "dnd-inhibited-notification": " ",
+        "dnd-inhibited-none": " ",
+      },
+      "return-type": "json",
+      "exec-if": "which swaync-client",
+      "exec": "swaync-client -swb",
+      "on-click": "sleep 0.1 && swaync-client -t -sw",
+      "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+      "escape": true
     }
 }
