@@ -80,7 +80,6 @@
         // "timezone": "America/Los_Angeles",
         "format": "{:%a %b %d %I:%M:%S %p}",
         "tooltip-format": "<big>{:%Y %B %d}</big>\n<tt><small>{calendar}</small></tt>",
-        "on-click": "swaync-client -t",
         "interval": 1
     },
     "cpu": {
