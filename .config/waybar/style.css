@@ -107,6 +107,7 @@ window#waybar.hidden {
 #custom-launcher:hover,
 #custom-spotify:hover,
 #idle_inhibitor:hover,
+#custom-notification:hover,
 #temperature:hover {
     color: #FFFFFF;
 }
