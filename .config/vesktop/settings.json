@@ -2,11 +2,14 @@
     "minimizeToTray": "on",
     "discordBranch": "stable",
     "arRPC": "on",
-    "splashColor": "rgb(239, 239, 240)",
+    "splashColor": "rgb(239, 239, 241)",
     "splashBackground": "rgb(18, 18, 20)",
     "spellCheckLanguages": [
         "en-US",
         "en"
     ],
-    "enableSplashScreen": false
+    "enableSplashScreen": false,
+    "audio": {
+        "granularSelect": false
+    }
 }
