@@ -6,19 +6,19 @@
 }
 {
     "label" : "logout",
-    "action" : "hyprctl dispatch exit",
+    "action" : "hyprsession save && hyprctl dispatch exit",
     "text" : "Logout",
     "keybind" : "2"
 }
 {
     "label" : "shutdown",
-    "action" : "shutdown now",
+    "action" : "hyprsession save && shutdown now",
     "text" : "Shutdown",
     "keybind" : "3"
 }
 {
     "label" : "suspend",
-    "action" : "systemctl suspend",
+    "action" : "hyprsession save && systemctl suspend",
     "text" : "Suspend",
     "keybind" : "4"
 }
