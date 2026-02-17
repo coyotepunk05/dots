@@ -18,13 +18,13 @@
 }
 {
     "label" : "suspend",
-    "action" : "hyprsession save && systemctl suspend",
+    "action" : "systemctl suspend",
     "text" : "Suspend",
     "keybind" : "4"
 }
 {
     "label" : "reboot",
-    "action" : "reboot",
+    "action" : "hyprsession save && reboot",
     "text" : "Reboot",
     "keybind" : "5"
 }

@@ -239,13 +239,14 @@
             "enabled": true,
             "deleteStyle": "text",
             "collapseDeleted": false,
-            "ignoreBots": false,
-            "ignoreSelf": false,
+            "ignoreBots": true,
+            "ignoreSelf": true,
             "ignoreUsers": "",
             "ignoreChannels": "",
             "ignoreGuilds": "",
             "logEdits": true,
-            "logDeletes": true
+            "logDeletes": true,
+            "inlineEdits": true
         },
         "MessageTags": {
             "enabled": true,
@@ -681,6 +682,9 @@
         },
         "MoreQuickReactions": {
             "enabled": false
+        },
+        "DisableDeepLinks": {
+            "enabled": true
         }
     },
     "notifications": {
@@ -693,7 +697,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1766961208532
+        "settingsSyncVersion": 1771121739278
     },
     "eagerPatches": false,
     "uiElements": {
