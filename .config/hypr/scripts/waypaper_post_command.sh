@@ -3,7 +3,7 @@
 wallpaper="$1"
 
 killall waypaper
-swww img $wallpaper --transition-fps 60 --transition-type grow --transition-pos 0,1600 --transition-duration 3
+awww img $wallpaper --transition-fps 60 --transition-type grow --transition-pos 0,1600 --transition-duration 3
 
 wal -i "$wallpaper" -n -e
 
