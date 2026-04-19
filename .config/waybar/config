@@ -85,11 +85,11 @@
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false,
-        "on-click": "killall missioncenter || GTK_THEME=Adwaita:dark missioncenter"
+        "on-click": "killall tux-manager || tux-manager"
     },
     "memory": {
         "format": "{}% ",
-        "on-click": "killall missioncenter || GTK_THEME=Adwaita:dark missioncenter"
+        "on-click": "killall tux-manager || tux-manager"
     },
     "temperature": {
         // "thermal-zone": 2,
