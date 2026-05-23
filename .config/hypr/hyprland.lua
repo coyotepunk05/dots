@@ -1,8 +1,7 @@
 -- IMPORT
 local home = os.getenv("HOME")
 local wal = dofile(home .. "/.cache/wal/colorsHyprland.lua")
-
--- check for hyprdynamicmonitors update and add import or whatever here.
+require("monitors")
 
 -- CONTEXT VARIABLES
 local terminal = "kitty"
@@ -39,7 +38,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
 	-- hl.exec_cmd("jamesdsp -t")
 	hl.exec_cmd("nm-applet --indicator")
-	hl.exec_cmd("blueman - applet")
+	hl.exec_cmd("blueman-applet")
 	hl.exec_cmd(
 		"env DRI_PRIME=0 __NV_PRIME_RENDER_OFFLOAD=0 __GLX_VENDOR_LIBRARY_NAME=mesa VK_ICD_FILENAMES='' VK_LAYER_PATH='' swaync"
 	)
@@ -64,12 +63,9 @@ hl.bind(mainMod .. " + G", function()
 	hl.dispatch(hl.dsp.window.center())
 end)
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = 1 }))
-hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen())
+hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen("1", "0"))
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
-hl.bind(
-	mainMod .. " + ALT + TAB",
-	hl.dsp.exec_cmd("quickshell ipc -p ~/.config/quickshell/qs-hyprview/ call expose toggle bands")
-)
+hl.bind("ALT + TAB", hl.dsp.exec_cmd("quickshell ipc -p ~/.config/quickshell/qs-hyprview/ call expose toggle bands"))
 hl.bind(mainMod .. " + S", hl.dsp.layout("swapwithmaster master"))
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
@@ -91,15 +87,16 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind("CTRL + SHIFT + escape", hl.dsp.exec_cmd("killall tux-manager || tux-manager"))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("killall rofi || rofi -modi 'calc,drun' -show drun"))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("obsidian"))
--- hl.bind(
--- mainMod .. " + M",
--- hl.dsp.exec_cmd(
--- 	"kill $(hyprctl -j clients | jq -r '.[] | select(.title|test('^.*hyprdynamicmonitors$')) | .pid') || kitty --title hyprdynamicmonitors --class hyprdynamicmonitors --detach -e hyprdynamicmonitors tui"
--- )
---  )
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("killall waybar || waybar"))
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("killall waypaper || waypaper"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("pkill -x slurp || hyprshot -m region -o ~/Pictures/Screenshots -z"))
+
+hl.bind(
+	"SUPER + M",
+	hl.dsp.exec_cmd([[
+    kill $(hyprctl -j clients | jq -r '.[] | select(.title | test("^.*hyprmoncfg$")) | .pid') 2>/dev/null || kitty --title hyprmoncfg --class hyprmoncfg --detach -e hyprmoncfg tui
+]])
+)
 
 -- BINDS -- FUNCTIONS
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("waypaper --random"))
@@ -110,14 +107,24 @@ hl.bind("XF86PowerOff", hl.dsp.exec_cmd("wlogout -b 5 -T 500 -B 500"))
 hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("systemctl suspend"))
 
 -- BINDS -- KEYS
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("pamixer -i 5 @DEFAULT_SINK@"), { locked = true, repeating = true })
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("pamixer -d 5 @DEFAULT_SINK@"), { locked = true, repeating = true })
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd("pamixer -t @DEFAULT_SINK@"), { locked = true, repeating = true })
+hl.bind(
+	"XF86AudioRaiseVolume",
+	hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),
+	{ locked = true, repeating = true }
+)
+hl.bind(
+	"XF86AudioLowerVolume",
+	hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),
+	{ locked = true, repeating = true }
+)
+hl.bind(
+	"XF86AudioMute",
+	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),
+	{ locked = true, repeating = true }
+)
 hl.bind(
 	"XF86AudioMicMute",
-	hl.dsp.exec_cmd(
-		"bash -c 'pamixer -t --default-source; state=$pamixer --default-source --get-mute); notify-send 'Mic: $( [ '$state' = true ] && echo Muted || echo On)'"
-	),
+	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),
 	{ locked = true, repeating = true }
 )
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), { locked = true, repeating = true })
@@ -128,7 +135,7 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
--- VISUALS
+-- VISUALS/LOOKS
 hl.config({
 	general = {
 		gaps_in = 2,
@@ -173,12 +180,11 @@ hl.config({
 	misc = {
 		force_default_wallpaper = 0,
 		disable_hyprland_logo = true,
-		vrr = 3,
+		vrr = 1,
 	},
 })
 
--- hl.curve("myBezier", { type = "bezier", points = { { 0.05, 0.9 }, { 0.1, 1.05 } } })
-
+-- CURVES/ANIMATIONS
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
 hl.curve("easeOutQuint", { type = "bezier", points = { { 0.23, 1 }, { 0.32, 1 } } })
 hl.curve("easeInOutCubic", { type = "bezier", points = { { 0.65, 0.05 }, { 0.36, 1 } } })
@@ -261,7 +267,6 @@ hl.layer_rule({ match = { namespace = "bar-2" }, blur = true })
 hl.layer_rule({ match = { namespace = "waybar" }, blur = true, order = 0 })
 
 --WINDOWRULES
-
 --- waypaper
 hl.window_rule({
 	name = "waypaper",
@@ -331,8 +336,8 @@ hl.window_rule({
 	match = { class = "tux-manager" },
 	opacity = 0.7,
 	float = true,
-	move = { 1040, 100 },
-	size = { 1000, 750 },
+	move = { 1040, 35 },
+	size = { 1000, 1000 },
 	pin = true,
 })
 
@@ -341,6 +346,12 @@ hl.window_rule({
 	name = "VScode",
 	match = { class = "Code" },
 	opacity = 0.88,
+})
+
+hl.window_rule({
+	name = "hyprmoncfg",
+	match = { title = "hyprmoncfg" },
+	float = true,
 })
 
 -- pavucontrol
@@ -401,7 +412,7 @@ hl.window_rule({
 	float = true,
 })
 
--- INPUT
+-- INPUT/KEYBOARD/TOUCHPAD/MOUSE
 hl.gesture({
 	fingers = 3,
 	direction = "horizontal",
@@ -454,3 +465,5 @@ for i = 1, 9 do
 	hl.bind("SUPER + " .. i, hs.dsp.focus({ workspace = i }))
 	hl.bind("SUPER + SHIFT + " .. i, hs.dsp.window.move({ workspace = i, follow = false }))
 end
+hl.bind("SUPER + 0", hs.dsp.focus({ workspace = 10 }))
+hl.bind("SUPER + SHIFT + 0", hs.dsp.window.move({ workspace = 10, follow = false }))
