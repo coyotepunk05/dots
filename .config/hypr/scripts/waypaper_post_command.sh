@@ -9,6 +9,8 @@ wal -i "$wallpaper" -n -e
 
 sleep 0.7s
 
+hyprctl reload
+
 pywalfox update
 
 cp ~/.cache/wal/colors-waybar.css ~/.config/waybar/colors-waybar.css
@@ -20,4 +22,5 @@ sh ~/.config/hypr/scripts/starshipwal/starshipwal_contrast.sh
 pywal-discord
 
 fcitx5-remote -e && fcitx5
+
 # touch ~/.config/waybar/style.css
