@@ -15,8 +15,8 @@
     //     "all-outputs": true,
          "warp-on-scroll": false,
     //     "format": "{name}: {icon}",
-          "on-scroll-up": "hyprctl dispatch workspace +1",
-          "on-scroll-down": "hyprctl dispatch workspace -1",
+          "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"+1\" })'",
+          "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"-1\" })'",
           "smooth-scrolling-threshold": 2.5
      },
     "keyboard-state": {
