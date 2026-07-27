@@ -59,7 +59,7 @@ inputbar {
 entry {
     margin: 8px;
     blink: true;
-    placeholder: "   Search";
+    placeholder: "  Search";
   }
 
 prompt {

@@ -16,7 +16,7 @@
          "warp-on-scroll": false,
     //     "format": "{name}: {icon}",
           "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"+1\" })'",
-          "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"-1\" })'",
+          "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"-1'\" })'",
           "smooth-scrolling-threshold": 2.5
      },
     "keyboard-state": {
@@ -125,9 +125,9 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
+        "format-ethernet": "{ipaddr}/{cidr} 󱂇",
+        "tooltip-format": "{ifname} via {gwaddr} 󱂇",
+        "format-linked": "{ifname} (No IP) 󱂇",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
@@ -141,11 +141,11 @@
         "format-source": "",
         "format-source-muted": " ",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": "󰏲 ",
+            "portable": "󰏲 ",
             "car": "",
             "default": [" ", " ", " "]
         },

@@ -183,6 +183,9 @@ hl.config({
 		disable_hyprland_logo = true,
 		vrr = 1,
 	},
+	xwayland = {
+		force_zero_scaling = true,
+	},
 })
 
 -- CURVES/ANIMATIONS
