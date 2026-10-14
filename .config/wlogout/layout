@@ -6,13 +6,13 @@
 }
 {
     "label" : "logout",
-    "action" : "hyprsession save && hyprctl dispatch exit",
+    "action" : "hypr-persist save && hyprctl dispatch 'hl.dsp.exit()'",
     "text" : "Logout",
     "keybind" : "2"
 }
 {
     "label" : "shutdown",
-    "action" : "hyprsession save && shutdown now",
+    "action" : "hypr-persist save && shutdown now",
     "text" : "Shutdown",
     "keybind" : "3"
 }
@@ -24,7 +24,7 @@
 }
 {
     "label" : "reboot",
-    "action" : "hyprsession save && reboot",
+    "action" : "hypr-persist save && reboot",
     "text" : "Reboot",
     "keybind" : "5"
 }

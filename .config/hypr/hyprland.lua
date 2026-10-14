@@ -34,7 +34,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("awww-daemon")
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("hyprsunset")
-	hl.exec_cmd("hyprsession")
+	hl.exec_cmd("hypr-persist restore")
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
 	-- hl.exec_cmd("jamesdsp -t")
 	hl.exec_cmd("nm-applet --indicator")
@@ -535,6 +535,15 @@ for i = 1, 9 do
 end
 hl.bind("SUPER + 0", hs.dsp.focus({ workspace = 10 }))
 hl.bind("SUPER + SHIFT + 0", hs.dsp.window.move({ workspace = 10, follow = false }))
+
+do
+	local path = os.getenv("HOME") .. "/.config/hypr/hyprmoncfg-monitors.lua"
+	local file = io.open(path, "r")
+	if file then
+		file:close()
+		dofile(path)
+	end
+end
 
 do
 	local path = os.getenv("HOME") .. "/.config/hypr/hyprmoncfg-monitors.lua"
