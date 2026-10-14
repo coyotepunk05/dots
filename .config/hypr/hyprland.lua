@@ -53,6 +53,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 	hl.exec_cmd("dbus-update-activation-environment --systemd --all")
 	hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+	hl.exec_cmd("linux-enable-ir-emitter run")
 end)
 
 -- BINDS
@@ -75,8 +76,8 @@ hl.bind(mainMod .. " + SHIFT + Up", hl.dsp.window.move({ direction = "u" }))
 hl.bind(mainMod .. " + SHIFT + Down", hl.dsp.window.move({ direction = "d" }))
 hl.bind(mainMod .. " + SHIFT + Right", hl.dsp.window.move({ monitor = "+1" }))
 hl.bind(mainMod .. " + SHIFT + Left", hl.dsp.window.move({ monitor = "-1" }))
-hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "+1" }))
-hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "-1" }))
+hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "-1" }))
+hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "+1" }))
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + ALT + mouse:272", hl.dsp.window.resize(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
@@ -127,8 +128,8 @@ hl.bind(
 	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),
 	{ locked = true, repeating = true }
 )
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 2%+"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 2%-"), { locked = true, repeating = true })
 
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
@@ -197,7 +198,7 @@ hl.curve("almostLinear", { type = "bezier", points = { { 0.5, 0.5 }, { 0.75, 1 }
 hl.curve("quick", { type = "bezier", points = { { 0.15, 0 }, { 0.1, 1 } } })
 
 -- Default springs
-hl.curve("easy", { type = "spring", mass = 1, stiffness = 71.2633, dampening = 15.8273644 })
+hl.curve("easy", { type = "spring", mass = 1, stiffness = 500, dampening = 45 })
 
 hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "default" })
 hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
@@ -242,14 +243,14 @@ hl.layer_rule({ match = { namespace = "logout_dialog" }, blur = true })
 
 -- swaync
 hl.layer_rule({
-	match = { namespace = "swaync-control-center" },
+	match = { namespace = "^swaync-control-center$" },
 	blur = true,
 	ignore_alpha = 0.1,
 	animation = "slide right",
 })
 
 hl.layer_rule({
-	match = { namespace = "swaync-notification-window" },
+	match = { namespace = "^swaync-notification-window$" },
 	blur = true,
 	ignore_alpha = 0.1,
 	animation = "slide right",
@@ -416,6 +417,69 @@ hl.window_rule({
 	float = true,
 })
 
+---@class FloatRule
+---@field width    integer    width as percent of monitor width  (1..100)
+---@field height   integer    height as percent of monitor height (1..100)
+---@field patterns string[]   Lua patterns matched against window title
+
+---@type FloatRule[]
+local rules = {
+	{
+		width = 30,
+		height = 54,
+		patterns = {
+			"%(Bitwarden.*Password Manager%) %- Bitwarden",
+			"^Bitwarden$",
+		},
+	},
+	{
+		width = 25,
+		height = 54,
+		patterns = {
+			"^Connexion : comptes Google %—",
+			"^Sign In %- Google Accounts %— ",
+			"^Sign in %- Google Accounts %- Helium$",
+		},
+	},
+	{ width = 25, height = 54, patterns = {
+		"^Extension: %(MetaMask%) %- MetaMask %— Firefox",
+	} },
+}
+
+---Return true if `title` matches any pattern in `rule`.
+---@param title string
+---@param rule  FloatRule
+---@return boolean
+local function matches(title, rule)
+	for _, pattern in ipairs(rule.patterns) do
+		if title:match(pattern) then
+			return true
+		end
+	end
+	return false
+end
+
+hl.on("window.title", function(window)
+	local title = window.title or ""
+	for _, rule in ipairs(rules) do
+		if matches(title, rule) then
+			local monitor = hl.get_active_monitor()
+			if not monitor then
+				return
+			end
+
+			hl.dispatch(hl.dsp.window.float({ window = window, action = "on" }))
+			hl.dispatch(hl.dsp.window.center({ window = window, action = "on" }))
+			hl.dispatch(hl.dsp.window.resize({
+				window = window,
+				x = math.floor(monitor.width * rule.width / 100),
+				y = math.floor(monitor.height * rule.height / 100),
+			}))
+			return
+		end
+	end
+end)
+
 -- INPUT/KEYBOARD/TOUCHPAD/MOUSE
 hl.gesture({
 	fingers = 3,
@@ -471,3 +535,22 @@ for i = 1, 9 do
 end
 hl.bind("SUPER + 0", hs.dsp.focus({ workspace = 10 }))
 hl.bind("SUPER + SHIFT + 0", hs.dsp.window.move({ workspace = 10, follow = false }))
+
+do
+	local path = os.getenv("HOME") .. "/.config/hypr/hyprmoncfg-monitors.lua"
+	local file = io.open(path, "r")
+	if file then
+		file:close()
+		dofile(path)
+	end
+end
+
+-- Added by hyprmoncfg: its generated monitor rules load last, so nothing before this can override the applied layout.
+do
+	local path = os.getenv("HOME") .. "/.config/hypr/hyprmoncfg-monitors.lua"
+	local file = io.open(path, "r")
+	if file then
+		file:close()
+		dofile(path)
+	end
+end

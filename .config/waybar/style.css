@@ -121,7 +121,7 @@ window#waybar.hidden {
     background-color: transparent;
     color: #E3242B;
     animation-name: blink;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -129,8 +129,8 @@ window#waybar.hidden {
 
 @keyframes blink {
     to {
-        background-color: #BF616A;
-        color: #B5E8E0;
+        background-color: transparent;
+        color: @color4;
     }
 }
 
