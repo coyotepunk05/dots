@@ -11,7 +11,7 @@ sleep 0.7s
 
 hyprctl reload
 
-pywalfox update
+# pywalfox update
 
 cp ~/.cache/wal/colors-waybar.css ~/.config/waybar/colors-waybar.css
 

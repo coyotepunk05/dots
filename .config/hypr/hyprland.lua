@@ -105,7 +105,7 @@ hl.bind("escape", hl.dsp.exec_cmd("killall waypaper"), { non_consuming = true })
 hl.bind("escape", hl.dsp.exec_cmd("hyprswitch close --kill"), { non_consuming = true })
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("wlogout -b 5 -T 500 -B 500"))
 hl.bind("XF86PowerOff", hl.dsp.exec_cmd("wlogout -b 5 -T 500 -B 500"))
-hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("systemctl suspend"))
+hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("systemctl suspend"), { locked = true })
 
 -- BINDS -- KEYS
 hl.bind(
@@ -535,6 +535,15 @@ for i = 1, 9 do
 end
 hl.bind("SUPER + 0", hs.dsp.focus({ workspace = 10 }))
 hl.bind("SUPER + SHIFT + 0", hs.dsp.window.move({ workspace = 10, follow = false }))
+
+do
+	local path = os.getenv("HOME") .. "/.config/hypr/hyprmoncfg-monitors.lua"
+	local file = io.open(path, "r")
+	if file then
+		file:close()
+		dofile(path)
+	end
+end
 
 do
 	local path = os.getenv("HOME") .. "/.config/hypr/hyprmoncfg-monitors.lua"
