@@ -64,7 +64,7 @@ hl.bind(mainMod .. " + G", function()
 	hl.dispatch(hl.dsp.window.center())
 end)
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = 1 }))
-hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen("1", "0"))
+hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = 0 }))
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind("ALT + TAB", hl.dsp.exec_cmd("quickshell ipc -p ~/.config/quickshell/qs-hyprview/ call expose toggle bands"))
 hl.bind(mainMod .. " + S", hl.dsp.layout("swapwithmaster master"))
@@ -158,6 +158,7 @@ hl.config({
 
 		blur = {
 			enabled = true,
+			variant = "kawase",
 			popups = true,
 			size = 10,
 			passes = 3,
@@ -563,7 +564,6 @@ do
 	end
 end
 
--- Added by hyprmoncfg: its generated monitor rules load last, so nothing before this can override the applied layout.
 do
 	local path = os.getenv("HOME") .. "/.config/hypr/hyprmoncfg-monitors.lua"
 	local file = io.open(path, "r")
@@ -572,3 +572,15 @@ do
 		dofile(path)
 	end
 end
+
+do
+	local path = os.getenv("HOME") .. "/.config/hypr/hyprmoncfg-monitors.lua"
+	local file = io.open(path, "r")
+	if file then
+		file:close()
+		dofile(path)
+	end
+end
+
+-- Added by hyprmoncfg: its generated monitor rules load last, so nothing before this can override the applied layout.
+do local path = os.getenv("HOME") .. "/.config/hypr/hyprmoncfg-monitors.lua"; local file = io.open(path, "r"); if file then file:close(); dofile(path) end end

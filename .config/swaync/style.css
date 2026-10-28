@@ -25,6 +25,7 @@
   border: var(--border);
   border-width: 0.1em;
   border-color: @noti-border-color;
+  backdrop-filter: blur(20px);
 }
 
 .widget-title > label {
@@ -80,6 +81,7 @@
   border: var(--border);
   border-width: 0.1em;
   border-color: @noti-border-color;
+  backrop-filter: blur(20px);
 }
 
 .notification-default-action,
