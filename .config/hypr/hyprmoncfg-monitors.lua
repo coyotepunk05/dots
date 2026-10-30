@@ -19,3 +19,5 @@ hl.workspace_rule({ workspace = "6", monitor = "desc:AU Optronics 0x7AA7" })
 hl.workspace_rule({ workspace = "7", monitor = "desc:AU Optronics 0x7AA7" })
 hl.workspace_rule({ workspace = "8", monitor = "desc:AU Optronics 0x7AA7" })
 hl.workspace_rule({ workspace = "9", monitor = "desc:AU Optronics 0x7AA7" })
+
+hl.config({ input = { touchdevice = { transform = 0 }, tablet = { transform = 0 } } })

@@ -11,12 +11,13 @@ local scriptsDir = "~/.config/hypr/scripts"
 local mainMod = "SUPER"
 
 -- ENVIRONMENT VARIABLES
-hl.env("p__NV_PRIME_RENDER_OFFLOAD", "0")
-hl.env("__GLX_VENDOR_LIBRARY_NAME", "mesa")
+hl.env("AQ_DRM_DEVICES", "/dev/dri/card1:/dev/dri/card0")
+-- remember to enable nvidia-persistend
+-- hl.env("p__NV_PRIME_RENDER_OFFLOAD", "0")
+-- hl.env("__GLX_VENDOR_LIBRARY_NAME", "mesa")
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_MENU_PREFIX", "arch-")
 hl.env("GDK_BACKEND", "wayland")
-hl.env("SDL_VIDE0DRIVER", "wayland")
 hl.env("CLUTTER_BACKEND", "wayland")
 hl.env("MOZ_ENABLE_WAYLAND", "1")
 
@@ -158,7 +159,6 @@ hl.config({
 
 		blur = {
 			enabled = true,
-			variant = "kawase",
 			popups = true,
 			size = 10,
 			passes = 3,
@@ -564,23 +564,12 @@ do
 	end
 end
 
-do
-	local path = os.getenv("HOME") .. "/.config/hypr/hyprmoncfg-monitors.lua"
-	local file = io.open(path, "r")
-	if file then
-		file:close()
-		dofile(path)
-	end
-end
-
-do
-	local path = os.getenv("HOME") .. "/.config/hypr/hyprmoncfg-monitors.lua"
-	local file = io.open(path, "r")
-	if file then
-		file:close()
-		dofile(path)
-	end
-end
-
 -- Added by hyprmoncfg: its generated monitor rules load last, so nothing before this can override the applied layout.
-do local path = os.getenv("HOME") .. "/.config/hypr/hyprmoncfg-monitors.lua"; local file = io.open(path, "r"); if file then file:close(); dofile(path) end end
+do
+	local path = os.getenv("HOME") .. "/.config/hypr/hyprmoncfg-monitors.lua"
+	local file = io.open(path, "r")
+	if file then
+		file:close()
+		dofile(path)
+	end
+end

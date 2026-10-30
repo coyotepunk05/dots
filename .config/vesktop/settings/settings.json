@@ -664,9 +664,6 @@
         "HideMedia": {
             "enabled": true
         },
-        "ExpressionCloner": {
-            "enabled": true
-        },
         "CopyStickerLinks": {
             "enabled": false
         },
@@ -685,6 +682,9 @@
         },
         "MusicRichPresence": {
             "enabled": false
+        },
+        "ExpressionManager": {
+            "enabled": true
         }
     },
     "notifications": {
@@ -697,7 +697,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1792213640222
+        "settingsSyncVersion": 1793333844424
     },
     "eagerPatches": false,
     "uiElements": {
